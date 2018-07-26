@@ -1,0 +1,42 @@
+// const gulp = require('gulp'); Основной
+// const watch = require('gulp-watch'); Смотреть изменения. Может не работать - использовать gulp.watch
+// const browserSync = require('browser-sync'); LiveLoad
+// const reload = browserSync.reload; LiveLoad_Reload
+// const cssMin = require('gulp-clean-css'); Css minify
+// const autoPrefixer = require('gulp-autoprefixer');
+// const autoprefixer = require('autoprefixer'); plugin for postCss
+// const postcss = require('gulp-postcss'); Обработка css (автопрефикс и тд)
+// const csscomb = require('gulp-csscomb'); Сортировщик свойств
+// const csscomblint = require('gulp-csscomb-lint');
+// const jsMin = require('gulp-uglify'); Js minify
+// const jsMin = require('gulp-uglify-es').default; Js minify-ES6
+// const babel = require('gulp-babel'); ES6->ES5
+// const imageMin = require('gulp-imagemin'); imgOptimiz
+// const pngquant = require('imagemin-pngquant'); imgOptimiz
+// const rimraf = require('rimraf'); rm -r
+// const include = require("gulp-include"); full-control-Concatenate
+// const fileinclude = require('gulp-file-include'); Сцепление через префикс @@include
+// const concat = require('gulp-concat'); сцепление файлов в один
+// const importCss = require('gulp-import-css'); Сцепляет все css в один через @import. Работает не только для css
+// const sass = require('gulp-sass'); SASS компилятор
+// const sourcemaps = require('gulp-sourcemaps'); сурсмапы
+// const rigger = require('gulp-rigger'); Соединение через //= file НЕ РАБОТАЕТ В CSS
+// const rename = require('gulp-rename'); Переименовать файл
+// const runSequence = require('run-sequence'); последов. запуск тасков (синх!)
+// load tasks from gulp-tasks/
+// const hub = require('gulp-hub');
+// hub(['./gulp-tasks/*.js']);
+
+// // JS SIMPLE COMPILE
+// gulp.task('js:public', function () {
+//   return gulp.src(path.src.jsMain) //Найдем наш main файл
+//     .pipe(sourcemaps.init())
+//     .pipe(include())
+//     .pipe(babel({
+//       presets: ['env']
+//       }))
+//     .pipe(jsMin()) //Сожмем наш js
+//     .pipe(sourcemaps.write())
+//     .pipe(gulp.dest(path.public.js)) //Выплюнем готовый файл в public
+//     .pipe(reload({stream: true})); //И перезагрузим сервер
+// });
