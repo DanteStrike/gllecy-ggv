@@ -1,11 +1,27 @@
+mixin add(bName, mix, mod)
+  include ./extends/footer.pug
+
 doctype html
 html(lang='en')
   head
-    title #{title} MAIN JSON
+
+    meta(charset = 'utf-8')
+    title #{title}
+    link(href='assets/css/normalize.css', rel='stylesheet')
+    link(href='assets/css/style.css', rel='stylesheet')
+
   body
-    h1 Pug Examples
-    div.container
-      p Cool Pug example!
-    ul
-      each val in masAdd
-        li= val + ' addJSON!'
+
+    header.page-header
+      +add('./extends/footer.pug', '1', '2')
+      //- block header-top
+      //- block promo-slider
+
+//-     main.page-mian
+//-       block shares
+//-       block popular-product
+//-       block advantages
+//-       block about
+//-       block map
+
+//-    extends ./extends/footer.pug
