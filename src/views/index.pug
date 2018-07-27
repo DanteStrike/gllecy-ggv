@@ -1,27 +1,41 @@
-mixin add(bName, mix, mod)
-  include ./extends/#{bName}
+include ./init/head.pug
 
-doctype html
-html(lang='en')
-  head
+body
 
-    meta(charset = 'utf-8')
-    title #{title}
-    link(href='assets/css/normalize.css', rel='stylesheet')
-    link(href='assets/css/style.css', rel='stylesheet')
+  header.page-header
+    - var mix = "page-header"
+    - var mod = ""
+    include ./blocks/header-top
 
-  body
+  main.page-main
+    h1.page-main__title.visually-hidden
+      | Магазин по продаже мороженого: "Glaccy Shope"
 
-    header.page-header
-      +add('./extends/footer.pug', '1', '2')
-      //- block header-top
-      //- block promo-slider
+    section.presentation.page-main__presentation
+      h2.presentation__title.visualy-hidden
+        | Презентация мороженого
+      - var mix = "presentation"
+      - var mod = ""
+      include ./blocks/slider.pug
 
-//-     main.page-mian
-//-       block shares
-//-       block popular-product
-//-       block advantages
-//-       block about
-//-       block map
+    section.shares.page-main__shares
+      h2.shares__title.visually-hidden
+        | Акции
 
-//-    extends ./extends/footer.pug
+      - var inc = 0
+      each share in shares
+        - inc++
+        - var mix = "shares"
+        - var mod = inc + ""
+        include ./share.pug
+
+    section.hits
+      h2.hits__title.visually-hidden
+        | Хиты продаж
+
+
+
+
+
+    //  include ./blocks/header-top
+

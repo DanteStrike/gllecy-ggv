@@ -1,0 +1,18 @@
+- var blockName = "form-search"
+include ./block-init.pug
+
+form.form-cart(class=[mix, mod], action="GET", method="https://echo.htmlacademy.ru")
+  ul.form-cart__product-list
+    each product in user.products
+      li.form-cart__product-item
+        button.form-cart__product-erase
+        img.form-cart__product-img(src=product.imgURL, alt="Картинка с мороженым")
+        span.form-cart__product-title #{product.name}
+        span.form-cart__product-weight #{product.weight} кг
+        span.form-cart__product-multiply x
+        span.form-cart__product-cost #{product.cost} руб.
+        span.form-cart__product-price #{product.fullPrice} руб.
+
+  .form-cart__separator
+  span.form-cart__total-price Итого: #{totalPrice} руб.
+  button.button.form-cart__button(type="submit") Оформить заказ

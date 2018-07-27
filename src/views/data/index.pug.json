@@ -1,3 +1,58 @@
 {
-  "masAdd": [1, 2, 3]
+  "activePageName": "Главная",
+
+  "activePageUrl": "/index.html",
+
+  "sider": {
+    "promoSlides": [
+      {
+        "title": "Крем-брюле и пломбир с малиновым джемом"
+      },
+      {
+        "title": "Шоколадный пломбир и лимонный сорбет"
+      },
+      {
+        "title": "Пломбир с помадкой и клубничный щербет"
+      }
+    ],
+    "promoSlidesCount": 3
+  },
+
+  "shares": [
+    {
+      "title": "",
+      "description": "",
+      "buttonText": "",
+      "backgroundImg": ""
+    },
+    {
+      "title": "",
+      "description": "",
+      "buttonText": "",
+      "backgroundImg": ""
+    }
+  ],
+
+  "hits": [
+    {
+      "imgURL": "",
+      "cost": "",
+      "title": ""
+    },
+    {
+      "imgURL": "",
+      "cost": "",
+      "title": ""
+    },
+    {
+      "imgURL": "",
+      "cost": "",
+      "title": ""
+    },
+    {
+      "imgURL": "",
+      "cost": "",
+      "title": ""
+    }
+  ]
 }

@@ -1,3 +1,43 @@
 {
-  "title": "Test"
+  "title": "Gllacy Shop",
+
+  "user": {
+    "auth":"false",
+
+    "cartEmpty": "true",
+    "cartTitle": "2 товара",
+    "totalPrice": "750",
+
+    "products": [
+      {
+        "title": "Пломбир с апельсиновым джемом",
+        "imgURL": "#",
+        "cost": "200",
+        "weight": "1,5",
+        "fullPrice": "450"
+      },
+      {
+        "title": "Клубничный пломбир с присыпкой из белого шоколада",
+        "imgURL": "#",
+        "cost": "200",
+        "weight": "1,5",
+        "fullPrice": "300"
+      }
+    ]
+  },
+
+  "headerNavMenuLinks": [
+    {
+      "name": "Каталог",
+      "url": "/catalog.html"
+    },
+    {
+      "name": "Доставка и оплата",
+      "url": "#"
+    },
+    {
+      "name": "О Компании",
+      "url": "#"
+    }
+  ]
 }

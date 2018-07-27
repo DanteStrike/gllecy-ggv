@@ -1,0 +1,15 @@
+- var blockName = "form-search"
+include ./block-init.pug
+
+form.form-auth(class=[mix, mod], action="GET", method="https://echo.htmlacademy.ru")
+  label.visually-hidden(for="auth-email") Электртонная почта
+  input.form-auth__email(id="auth-email", type="email", name="auth-email", placeholder="Электртонная почта")
+  label.visually-hidden(for="auth-password") Пароль
+  input.form-auth__password(id="auth-password", type="password", name="auth-password", placeholder="Пароль")
+  button.button.form-auth__button(type="submit")
+    | Войти
+  .form-auth__user-help
+    a.form-auth__recovery(href="#")
+      | Забыли пароль?
+    a.form-auth__registration(href="#")
+      | Новая регистрация

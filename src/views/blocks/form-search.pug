@@ -1,0 +1,8 @@
+- var blockName = "form-search"
+include ./block-init.pug
+
+form.form-search(class=[mix, mod], action="GET", method="https://echo.htmlacademy.ru")
+  label.visually-hidden(for="search") Поиск
+  input.form-search__input(id="search" type="search", name="search", placeholder="Что ищем?")
+  button.button.form-search__button(type='submit')
+    | Поиск

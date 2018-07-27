@@ -1,0 +1,55 @@
+- var blockName = "header-top"
+include ./block-init.pug
+
+.header-top(class=[mix, mod])
+  .header-top__first-layer
+    a.logo(href="/index.html") Логотип
+
+    nav.header-top__nav-menu
+      ul.header-top__nav-menu-list
+        each objLink in headerNavMenuLinks
+          li.header-top__nav-menu-item
+            a.header-top__nav-menu-link(class="header-top__nav-link--current" && (objLink.url == activePageUrl), href=objLink.url)
+            span.header-top__nav-menu-underline
+              | #{objLink.name}
+
+    nav.header-top__nav-user
+      ul.header-top__nav-user-list
+        li.header-top__nav-user-item
+          a.header-top__nav-user-link.header-top__nav-user-link--search(href="#")
+            | Поиск
+          - var mix = "header-top"
+          - var mod = ""
+          include ./form-search.pug
+
+        li.header-top__nav-user-item
+          if user.auth == "false"
+            a.header-top__nav-user-link.header-top__nav-user-link--login(href="#")
+              | Вход
+            - var mix = "header-top"
+            - var mod = ""
+            include ./form-auth.pug
+          else
+            a.header-top__nav-user-link.header-top__nav-user-link--logoff(href="#")
+              | Выход
+            - var mix = "header-top"
+            - var mod = ""
+            include ./user-profile.pug
+
+        li.header-top__nav-user-item
+          a.header-top__nav-user-link.header-top__nav-user-link--cart(href="#")
+          if user.cartEmpty == "true"
+            | Пусто
+          else
+            | #{user.cartTitle}
+            - var mix = "header-top"
+            - var mod = ""
+            include ./form-cart
+
+  .header-top__second-layer
+    p.header-top__contacts
+      span.header-top__work-time
+        | С 10 до 20, ежедневно
+      span.header-top__phone
+        | 8 812 450-25-25
+

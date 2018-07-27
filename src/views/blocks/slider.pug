@@ -1,0 +1,20 @@
+- var blockName = "slider"
+include ./block-init.pug
+
+.slider(class=[mix, mod])
+  ul.slider__list
+    - var inc = 0
+    each objSlide in slider.promoSlides
+      - inc++
+      - slideNumber = inc + ""
+      li.slider.slider--item
+        .slider__slide(class="slider__slide--" + #{slideNumber}
+        h3.slider.slider--slide-title
+          | #{objSlide.title}
+
+  a.slider__button.button(href="#")
+
+
+
+
+
