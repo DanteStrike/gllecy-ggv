@@ -1,7 +1,7 @@
 - var blockName = "share"
 include ./block-init.pug
 
-.share(class=[mix, mod], style="background-image: #{share.backgroundImgURL}")
+.share(class=[mix, mod], style="background-image: " + share.backgroundImgURL)
   h3.share__title #{share.title}
   p.share__description #{share.description}
   a.button.share__button(href="#") #{share.buttonText}

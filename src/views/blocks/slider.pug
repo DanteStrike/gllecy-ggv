@@ -6,10 +6,8 @@ include ./block-init.pug
     - var inc = 0
     each objSlide in slider.promoSlides
       - inc++
-      - slideNumber = inc + ""
-      li.slider.slider--item
-        .slider__slide(class="slider__slide--" + #{slideNumber}
-        h3.slider.slider--slide-title
+      li.slider__slide(class="slider__slide--" + inc)
+        h3.slider__slide-title
           | #{objSlide.title}
 
   a.slider__button.button(href="#")

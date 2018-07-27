@@ -1,0 +1,21 @@
+- var blockName = "products"
+include ./block-init.pug
+
+ul.products(class=[mix, max])
+  each product in products
+    li.products__product(class= product.hit ? "products__product--hit" : "")
+      img.products__product-img(url=product.imgURL, alt=product.title)
+      p.products__product-property
+        span.products__product-cost
+          | #{product.cost}
+        svg.products__P
+        span.products__product-weight-metr
+          | /кг
+      a.products__product-title
+        | #{product.title}
+      .products__product-hover
+        button.products__button.button
+          | Быстрый просмотр
+
+
+
