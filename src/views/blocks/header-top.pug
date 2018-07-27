@@ -10,8 +10,8 @@ include ./block-init.pug
         each objLink in headerNavMenuLinks
           li.header-top__nav-menu-item
             a.header-top__nav-menu-link(class="header-top__nav-link--current" && (objLink.url == activePageUrl), href=objLink.url)
-            span.header-top__nav-menu-underline
-              | #{objLink.name}
+              span.header-top__nav-menu-underline
+                | #{objLink.name}
 
     nav.header-top__nav-user
       ul.header-top__nav-user-list
