@@ -1,0 +1,55 @@
+- var blockName = "page-header"
+include ./block-init.pug
+
+.page-header(class=[mix, mod])
+  .page-header__first-layer
+    a.logo(href="/index.html") Логотип Glaccy Shop
+
+    nav.page-header__nav-menu
+      ul.page-header__nav-menu-list
+        each objLink in headerNavMenuLinks
+          li.page-header__nav-menu-item
+            a.page-header__nav-menu-link(class="page-header__nav-link--current" && (objLink.url == activePageUrl), href=objLink.url)
+              span.page-header__nav-menu-underline
+                | #{objLink.name}
+
+    nav.page-header__nav-user
+      ul.page-header__nav-user-list
+        li.page-header__nav-user-item
+          a.page-header__nav-user-link.page-header__nav-user-link--search(href="#")
+            | Поиск
+          - var mix = "page-header"
+          - var mod = ""
+          include ./form-search.pug
+
+        li.page-header__nav-user-item
+          if user.auth == "false"
+            a.page-header__nav-user-link.page-header__nav-user-link--login(href="#")
+              | Вход
+            - var mix = "page-header"
+            - var mod = ""
+            include ./form-auth.pug
+          else
+            a.page-header__nav-user-link.page-header__nav-user-link--logoff(href="#")
+              | Выход
+            - var mix = "page-header"
+            - var mod = ""
+            include ./user-profile.pug
+
+        li.page-header__nav-user-item
+          a.page-header__nav-user-link.page-header__nav-user-link--cart(href="#")
+          if user.cartEmpty == "true"
+            | Пусто
+          else
+            | #{user.cartTitle}
+            - var mix = "page-header"
+            - var mod = ""
+            include ./form-cart
+
+  .page-header__second-layer
+    p.page-header__contacts
+      span.page-header__work-time
+        | С 10 до 20, ежедневно
+      span.page-header__phone
+        | 8 812 450-25-25
+
