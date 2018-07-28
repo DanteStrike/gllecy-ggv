@@ -1,21 +1,22 @@
-$fontFamily: 'Merriweather', 'Georgia', serif;
+$fontFamily: "Roboto", "Georgia", sans-serif;
 
 body,
 html {
   box-sizing: border-box;
-  min-width: 1900px;
+  min-width: 900px;
+  max-width: 1200px;
   margin: 0;
   padding: 0;
 
-  // font-weight: 300;
-  // font-size: 16px;
-  // line-height: 18px;
-  // font-family: $fontFamily;
-  // color: #3c3c3c;
-  // text-transform: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $fontFamily;
+  color: #ffffff;
+  text-transform: none;
   // letter-spacing: -0.02em;
 
-  background-color: #ffffff;
+  background-color: #849d8f;
 }
 
 *,
@@ -28,7 +29,7 @@ a {
   margin: 0;
   padding: 0;
 
-  color: #3c3c3c;
+  color: #ffffff;
   text-decoration: none;
 }
 
