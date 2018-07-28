@@ -39,5 +39,43 @@
       "name": "О Компании",
       "url": "#"
     }
+  ],
+
+  "socials": [
+    {
+      "title": "Twitter",
+      "url": "#"
+    },
+    {
+      "title": "Instagram",
+      "url": "#"
+    },
+    {
+      "title": "Facebook",
+      "url": "#"
+    },
+    {
+      "title": "vkontakte",
+      "url": "#"
+    }
+  ],
+
+  "information": [
+    {
+      "title": "Для поставщиков",
+      "url": "#"
+    },
+    {
+      "title": "Наши документы",
+      "url": "#"
+    },
+    {
+      "title": "О производстве",
+      "url": "#"
+    },
+    {
+      "title": "Экологические стандарты",
+      "url": "#"
+    }
   ]
 }
