@@ -4,70 +4,67 @@
 doctype html
 html(lang="en")
 
-  header.page-header
-    - var mix = "page-header"
-    - var mod = ""
-    include ./blocks/header-top
-
-  main.page-main
-    h1.page-main__title.visually-hidden
-      | Магазин по продаже мороженого: "Glaccy Shope"
-
-    section.presentation.page-main__presentation
-      h2.presentation__section-title.visualy-hidden
-        | Презентация мороженого
-      - var mix = "presentation"
-      - var mod = ""
-      include ./blocks/slider.pug
   include ./init/head.pug
 
-    section.shares.page-main__shares
-      h2.shares__section-title.visually-hidden
-        | Акции
+  body.index
 
-      - var inc = 0
-      each share in shares
-        - inc++
-        - var mix = "shares"
-        - var mod = inc + ""
-        include ./blocks/share.pug
+    - var mix = "index"
+    - var mod = ""
+    include ./blocks/page-header.pug
 
-    section.hits.page-main__hits
-      h2.hits__title.visually-hidden
-        | Хиты продаж
-      - var mix = "hits"
-      - var mod = ""
-      include ./blocks/products.pug
+    main.page-main
+      h1.page-main__title.visually-hidden
+        | Магазин по продаже мороженого: "Glaccy Shope"
 
-    section.about.page-main__about
-      h2.abous__section-title.visually-hidden
-        | О магазине "Glaccy Shope"
-      strong.about__title
-        | Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
-      each featur, index in featurs
-        p.about__featur(class="about__featur--" + index)
-          | #{featur}
+      section.presentation.page-main__presentation
+        h2.presentation__section-title.visualy-hidden
+          | Презентация мороженого
+        - var mix = "presentation"
+        - var mod = ""
+        include ./blocks/slider.pug
 
-    section.blog.page-main__blog
-      h2.blog__section-title
-        | Новое в нашем блоге
-      p.blog__title
-        | #{blogTitle}
+      section.shares.page-main__shares
+        h2.shares__section-title.visually-hidden
+          | Акции
+        - var inc = 0
+        each share in shares
+          - inc++
+          - var mix = "shares"
+          - var mod = inc + ""
+          include ./blocks/share.pug
 
-    section.dispatch.page-main__dispatch
-      h2.dispatch__section-title
-        | Подписка
-      p.dispatch__description
-        | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
-        | всего самого вкусного, что у нас происходит. Обещаем не спамить
-        | и не слать всякой ненужной ерунды. Честно =)
+      section.hits.page-main__hits
+        h2.hits__title.visually-hidden
+          | Хиты продаж
+        - var mix = "hits"
+        - var mod = ""
+        include ./blocks/products.pug
 
-      form.dispatch.dispatch__form(action="GET", method="https://echo.htmlacademy.ru")
-        label.dispatch__form-label.visually-hidden(for="dispatch__form-input") Электронная почта
-        input.dispatch__form-input(id="dispatch__form-input", type="email", name="dispatch__form-input")
-        button.dispatch__form-button.button(type="submit") Отправить
+      section.about.page-main__about
+        h2.abous__section-title.visually-hidden
+          | О магазине "Glaccy Shope"
+        strong.about__title
+          | Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
+        each featur, index in featurs
+          p.about__featur(class="about__featur--" + index)
+            | #{featur}
 
+      section.blog.page-main__blog
+        h2.blog__section-title
+          | Новое в нашем блоге
+        p.blog__title
+          | #{blogTitle}
 
+      section.dispatch.page-main__dispatch
+        h2.dispatch__section-title
+          | Подписка
+        p.dispatch__description
+          | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
+          | всего самого вкусного, что у нас происходит. Обещаем не спамить
+          | и не слать всякой ненужной ерунды. Честно =)
+        form.dispatch.dispatch__form(action="GET", method="https://echo.htmlacademy.ru")
+          label.dispatch__form-label.visually-hidden(for="dispatch__form-input") Электронная почта
+          input.dispatch__form-input(id="dispatch__form-input", type="email", name="dispatch__form-input")
+          button.dispatch__form-button.button(type="submit") Отправить
 
-    //  include ./blocks/header-top
 
