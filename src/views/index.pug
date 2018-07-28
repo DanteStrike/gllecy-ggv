@@ -1,6 +1,8 @@
-include ./init/head.pug
+- var mix =  ""
+- var mod = ""
 
-body
+doctype html
+html(lang="en")
 
   header.page-header
     - var mix = "page-header"
@@ -17,6 +19,7 @@ body
       - var mix = "presentation"
       - var mod = ""
       include ./blocks/slider.pug
+  include ./init/head.pug
 
     section.shares.page-main__shares
       h2.shares__section-title.visually-hidden
