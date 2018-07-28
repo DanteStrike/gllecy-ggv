@@ -9,10 +9,12 @@ include ./block-init.pug
       li.slider__slide(class="slider__slide--" + inc)
         h3.slider__slide-title
           | #{objSlide.title}
-
   a.slider__button.button(href="#")
-
-
-
-
-
+    | Давайте оба!
+  ul.slider__control-list
+    - var inc = 0
+    each objSlide in slider.promoSlides
+      - inc++
+      li.slider__control-item
+        button.slider__control-btn(class="slider__control-btn--" + inc)
+          | Слайд №#{inc}
