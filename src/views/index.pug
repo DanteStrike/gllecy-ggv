@@ -67,6 +67,26 @@ html(lang="en")
           input.dispatch__form-input(id="dispatch__form-input", type="email", name="dispatch__form-input")
           button.dispatch__form-button.button(type="submit") Отправить
 
+      section.contacts.page-main__contacts
+        h2.contacts__section-title
+          | Контактные данные
+        .contacts__map
+          iframe(src="https://yandex.ru/map-widget/v1/-/CBu0V4U1cB", frameborder="1", allowfullscreen="true")
+        .contacts__feedback
+          p.contacts__feedback-text
+            span.contacts__feedback-top
+              | Адрес главного офиса
+              | и офлайн магазина:
+            address.contacts__feedback-address
+              | ул. Большая Конюшенная 19/8, Санкт-Петербург
+            span.contacts__feedback-middle
+              | Для заказов по телефону:
+            address.contacts__feedback-phone
+              | 8 812 450-25-25
+            span.contacts__feedback-time
+              | (с 10 до 20 ежедневно)
+          button.contacts__button.button
+            | Форма обратной связи
 
     - var mix = ""
     - var mod = ""
