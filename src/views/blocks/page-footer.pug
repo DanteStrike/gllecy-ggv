@@ -1,0 +1,32 @@
+- var blockName = "page-footer"
+include ./block-init.pug
+
+.page-footer(class=[mix, mod])
+  ul.page-footer__socials-list
+    each modif, index in ["twit", "inst", "fb", "vk"]
+      li.page-footer__socials-item
+        a.page-footer__socials-link(
+          class="page-footer__socials-link--" + modif,
+          href= socials[index].url
+        )
+          | #{socials[index].title}
+  ul.page-footer__info-list
+    each info, index in information
+      li.page-footer__info-item
+        a.page-footer__info-link(
+          class= (index==0) ? "page-footer__info-link--with-love" : "",
+          href= info.url
+        )
+          | #{info.title}
+  .copyright
+    a.copyright__logo-link(href="#")
+      svg.copyright__logo
+      | Логотип htmlacademy
+    span.copyright__text
+      | Сделано в
+      a.copyright__text-link(href="#")
+        | HTML Academy
+      |© 2017
+
+
+
