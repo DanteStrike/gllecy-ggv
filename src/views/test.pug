@@ -1,0 +1,19 @@
+- var mix =  ""
+- var mod = ""
+
+doctype html
+html(lang="en")
+  include ./init/head.pug
+
+  body.index
+    section.filters
+      h2.filters__title.visually-hidden
+        | Фильтры для выборки
+
+      form.filters__form(action="GET", method="https://echo.htmlacademy.ru")
+        include ./blocks/filter-sort.pug
+        include ./blocks/filter-price.pug
+        include ./blocks/filter-fat.pug
+        include ./blocks/filter-type.pug
+        button.filters__form-button.button(type='submit')
+          | Применить
