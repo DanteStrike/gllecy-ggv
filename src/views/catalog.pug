@@ -29,9 +29,17 @@ html(lang="en")
       h1.page-main__title
         | #{pageTitle}
 
-      section.filters.page-main__filters
-        h2.catalog__title.visually-hidden
-          | Фильтры поиска
+      section.filters
+      h2.filters__title.visually-hidden
+        | Фильтры для выборки
+
+      form.filters__form(action="GET", method="https://echo.htmlacademy.ru")
+        include ./blocks/filter-sort.pug
+        include ./blocks/filter-price.pug
+        include ./blocks/filter-fat.pug
+        include ./blocks/filter-type.pug
+        button.filters__form-button.button(type='submit')
+          | Применить
 
 
       section.catalog.page-main__catalog
