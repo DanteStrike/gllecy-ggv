@@ -1,0 +1,41 @@
+section.pagination.page-main__pagination
+  h2.pagination__title.visually-hidden
+    | Нумерация страниц
+  nav.pagination__menu
+    ul.pagination__list
+      li.pagination__control
+        a.pagination__control-link.pagination__control-link--prev(
+          class = (pagination.current > 1) ?
+            "pagination__control-link--active" : "pagination__control-link--disable"
+          href="#"
+          )
+            | Назад
+
+      if pagination.count > pagination.maxPageCount
+        - var max = pagination.maxPageCount
+      else
+        - var max = pagination.count
+
+      if pagination.current > pagination.maxPageCount
+        - var n = pagination.current - pagination.maxPageCount + 1
+        - max += n - 1
+      else
+        - var n = 1
+
+      while n <= max
+        li.pagination__item
+          if n != pagination.current
+            a.pagination__link(href="#")
+              | #{n}
+          else
+            span.pagination__current
+              | #{n}
+          - n++
+
+      li.pagination__control
+        a.pagination__control-link.pagination__control-link--next(
+          class = (pagination.current < pagination.count) ?
+            "pagination__control-link--active" : "pagination__control-link--disable"
+          href="#"
+          )
+            | Вперед
