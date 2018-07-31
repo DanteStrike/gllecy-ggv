@@ -1,0 +1,26 @@
+- var blockName = "filter-price"
+include ./block-init.pug
+
+fieldset.filter-price(class=[mix, mod])
+  .filter-price__wrap
+    legend.filter-price__title
+      | Цена:
+    label.visually-hidden(for="filter-price__min")
+      | Минимальная цена
+    input.filter-price__min(id="filter-price__min", name="filter-price__min", type="number", min="0", max="700", placeholder="100", value="100")
+    span.filter-price__metr
+      | руб.
+    span.filter-price__sep
+      | -
+    label.visually-hidden(for="filter-price__max")
+      | Максимальная цена
+    input.filter-price__max(id="filter-price__max", name="filter-price__max", type="number", min="0", max="700", placeholder="500", value="700")
+    span.filter-price__metr
+      | руб.
+
+  .filter-price__range
+    .filter-price__range-bar
+      .filter-price__range-scale
+    .filter-price__range-toggle.filter-price__range-toggle--min
+    .filter-price__range-toggle.filter-price__range-toggle--max
+

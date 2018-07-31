@@ -1,0 +1,11 @@
+- var blockName = "filter-type"
+include ./block-init.pug
+
+fieldset.filter-type(class=[mix, mod])
+  legend.filter-type__title
+    | Наполнители:
+  .filter-type__wrap
+    each checkbox, index in typeSort
+      input.filter-type__checkbox(id="filter-type__checkbox--" + index, type="checkbox", name="filter-type", checked= (index == 0))
+      label(for="filter-type__checkbox--" + index)
+        | #{checkbox}

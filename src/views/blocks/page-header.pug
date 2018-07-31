@@ -3,15 +3,34 @@ include ./block-init.pug
 
 header.page-header(class=[mix, mod])
   .page-header__first-layer
-    a.logo(href="/index.html") Логотип Glaccy Shop
-
+    a.page-header__logo(href="/index.html") Логотип Glaccy Shop
+    //  MainMenu
     nav.page-header__nav-menu
       ul.page-header__nav-menu-list
         each objLink in headerNavMenuLinks
           li.page-header__nav-menu-item
-            a.page-header__nav-menu-link(class="page-header__nav-link--current" && (objLink.url == activePageUrl), href=objLink.url)
+            a.page-header__nav-menu-link(
+              class = "page-header__nav-link--current" && (objLink.url == activePageUrl),
+              href = objLink.url
+            )
               span.page-header__nav-menu-underline
                 | #{objLink.name}
+            //  SubMenu
+            nav.page-header__submenu
+              ul.page-header__submenu-list
+                each objSubLink in objLink.subMenuLinks
+                  if (objSubLink.url == false)
+                    li.page-header__submenu-item.page-header__submenu-item--border
+                      span.page-header__submenu-title
+                        | #{objSubLink.name}
+                  else
+                    li.page-header__submenu-item
+                      a.page-header__submenu-link(
+                        class = "page-header__submenu-link--current" && (objSubLink.url == activePageUrl),
+                        href = objSubLink.url
+                      )
+                        | #{objSubLink.name}
+
 
     nav.page-header__nav-user
       ul.page-header__nav-user-list

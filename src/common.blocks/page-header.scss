@@ -1,0 +1,16 @@
+.page-header {
+  min-height: 72px;
+  padding-top: 10px;
+
+  &__first-layer {
+    display: flex;
+  }
+
+  &__logo {
+    width: 154px;
+
+    font-size: 0;
+
+    background: url('../img/logo.svg') no-repeat;
+  }
+}

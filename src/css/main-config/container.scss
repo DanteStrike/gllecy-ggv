@@ -1,6 +1,6 @@
 .container {
-  width: 1550px;
+  min-width: 900px;
+  max-width: 1200px;
+  padding: 0 2.25%;
   margin: 0 auto;
-  padding: 0 15px;
-  overflow: hidden;
 }

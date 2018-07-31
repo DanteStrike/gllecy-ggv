@@ -29,15 +29,39 @@
   "headerNavMenuLinks": [
     {
       "name": "Каталог",
-      "url": "/catalog.html"
+      "url": "/catalog.html",
+      "subMenuLinks": [
+        {
+          "name": "Новинки",
+          "url": false
+        },
+        {
+          "name": "Сливочное",
+          "url": "/catalog.html"
+        },
+        {
+          "name": "Щербеты",
+          "url": "#"
+        },
+        {
+          "name": "Фруктовый лед",
+          "url": "#"
+        },
+        {
+          "name": "Мелорин",
+          "url": "#"
+        }
+      ]
     },
     {
       "name": "Доставка и оплата",
-      "url": "#"
+      "url": "#",
+      "subMenuLinks": []
     },
     {
       "name": "О Компании",
-      "url": "#"
+      "url": "#",
+      "subMenuLinks": []
     }
   ],
 
