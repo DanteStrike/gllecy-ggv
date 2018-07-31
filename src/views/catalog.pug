@@ -1,0 +1,51 @@
+- var mix =  ""
+- var mod = ""
+
+doctype html
+html(lang="en")
+
+  include ./init/head.pug
+
+  body.catalog
+
+    - var mix = "catalog"
+    - var mod = ""
+    include ./blocks/page-header.pug
+
+    main.page-main
+      section.breadcrumbs.page-main__breadcrumbs
+        h2.breadcrumbs__title.visually-hidden
+          | Навигация
+        ul.breadcrumbs__list
+          each breadcrumb in breadcrumbs
+            li.breadcrumbs__item
+              if breadcrumb.url
+                a.breadcrumbs__link(href=breadcrumb.url)
+                  | #{breadcrumb.name}
+              else
+                span.breadcrumbs__current
+                  | #{breadcrumb.name}
+
+      h1.page-main__title
+        | #{pageTitle}
+
+      section.filters.page-main__filters
+        h2.catalog__title.visually-hidden
+          | Фильтры поиска
+
+
+      section.catalog.page-main__catalog
+        h2.catalog__title.visually-hidden
+          | Каталог
+        - var mix = "catalog"
+        - var mod = ""
+        include ./blocks/products.pug
+
+      - var mix = "page-main"
+      - var mod = ""
+      include ./blocks/pagination.pug
+
+
+    - var mix = ""
+    - var mod = ""
+    include ./blocks/page-footer.pug
