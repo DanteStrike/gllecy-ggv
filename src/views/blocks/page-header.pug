@@ -36,6 +36,7 @@ header.page-header(class=[mix, mod])
         li.page-header__nav-user-item
           a.page-header__nav-user-link.page-header__nav-user-link--search(href="#")
             | Поиск
+            include ../../img/lens.svg
           - var mix = "page-header"
           - var mod = ""
           include ./form-search.pug
@@ -44,30 +45,34 @@ header.page-header(class=[mix, mod])
           if user.auth == "false"
             a.page-header__nav-user-link.page-header__nav-user-link--login(href="#")
               | Вход
+              include ../../img/auth.svg
             - var mix = "page-header"
             - var mod = ""
             include ./form-auth.pug
           else
             a.page-header__nav-user-link.page-header__nav-user-link--logoff(href="#")
               | Выход
+              include ../../img/auth.svg
             - var mix = "page-header"
             - var mod = ""
             include ./user-profile.pug
 
         li.page-header__nav-user-item
           a.page-header__nav-user-link.page-header__nav-user-link--cart(href="#")
-          if user.cartEmpty == "true"
-            | Пусто
-          else
-            | #{user.cartTitle}
-            - var mix = "page-header"
-            - var mod = ""
-            include ./form-cart
+            include ../../img/cart-dis.svg
+
+            if user.cartEmpty == "true"
+              | Пусто
+            else
+              | #{user.cartTitle}
+              - var mix = "page-header"
+              - var mod = ""
+              include ./form-cart
 
   .page-header__second-layer
     p.page-header__contacts
       span.page-header__work-time
         | С 10 до 20, ежедневно
       span.page-header__phone
-        | 8 812 450-25-25
+        | 8&nbsp;812 450-25-25
 

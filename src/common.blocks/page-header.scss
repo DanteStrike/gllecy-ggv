@@ -1,9 +1,24 @@
+$dftColor: rgb(255, 255, 255);
+$dftBorder: rgba(0, 0, 0, 0.2);
+$hoverColor: rgb(50, 50, 50);
+$hoverBgColor: rgb(248, 247, 244);
+$activeBgColor: rgba(248, 247, 244, 0.988);
+$hoverSubBgColor: rgb(251, 222, 215);
+$activeSubBgColor: rgb(246, 181, 165);
+$hoverColor--crt: rgb(255, 255, 255);
+$hoverBgColor--crt: rgb(208, 112, 88);
+$userNavBtnBg: rgba(255, 255, 255, 0.2);
+$hoverSvgFill: rgb(0, 0, 0);
+
+
 .page-header {
   margin-bottom: 300px;
   padding: 0 2.25%;
-  padding-top: 10px;
+  padding-top: 9px;
+
   &__first-layer {
     display: flex;
+    margin-bottom: 1px;
   }
 
   &__logo {
@@ -18,11 +33,21 @@
 
   &__nav-menu-list {
     display: flex;
-    padding-top: 13px;
+    padding-top: 14px;
   }
 
   &__nav-menu-item {
     position: relative;
+
+    padding-bottom: 5px;
+
+    border-radius: 15px 15px 20px 20px;
+  }
+
+  &__nav-menu-item:hover &__nav-menu-link {
+    color: $hoverColor;
+
+    background-color: $hoverBgColor;
   }
 
   &__nav-menu-link {
@@ -32,15 +57,15 @@
     padding: 0 14px;
 
     font-weight: 700;
+    font-size: 1rem;
     line-height: 2;
     text-align: center;
 
     border-radius: 14px;
 
-    &:hover {
-      color: #000000;
-
-      background-color: #ffffff;
+    &:active {
+      background-color: $activeBgColor;
+      box-shadow: inset 0 2px 1px 0 rgb(105, 105, 105);
     }
 
     &::after {
@@ -53,17 +78,77 @@
       width: auto;
       height: 1px;
 
-      background-color: #ffffff;
+      background-color: $dftColor;
       opacity: 0.2;
+    }
+
+    &--current {
+      color: $hoverColor--crt;
+
+      background-color: $hoverBgColor--crt;
+
+      &::after {
+        background: none;
+      }
     }
   }
 
   &__submenu {
     position: absolute;
+    top: 100%;
     z-index: -1;
+
+    width: 143px;
+    overflow: hidden;
+
+    background-color: $hoverBgColor;
+    border-radius: 5px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   }
 
-  &__nav-menu-link:hover &__submenu {
+  &__submenu-title {
+    display: block;
+    width: 128px;
+    min-height: 39px;
+    margin-left: 6px;
+    padding: 10px 0 0 15px;
+
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    color: $hoverColor;
+
+    border-bottom: 1px solid $dftBorder;
+  }
+
+  &__submenu-link {
+    display: block;
+    width: auto;
+    min-height: 28px;
+    padding: 5px 0 0 21px;
+
+    font-size: 0.875rem;
+    line-height: 1.2;
+    color: $hoverColor;
+
+    &:hover {
+      background-color: $hoverSubBgColor;
+    }
+
+    &:active {
+      background-color: $activeSubBgColor;
+    }
+
+    &--current {
+      color: $hoverColor--crt;
+
+      background-color: $hoverBgColor--crt;
+
+      pointer-events: none;
+    }
+  }
+
+  &__nav-menu-item:hover &__submenu {
     z-index: 1;
   }
 
@@ -73,6 +158,82 @@
 
   &__nav-user-list {
     display: flex;
+    padding-top: 14px;
+  }
+
+  &__nav-user-item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__nav-user-link {
+    position: relative;
+
+    display: block;
+    min-height: 32px;
+    padding-top: 8px;
+
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    text-align: right;
+
+    background-color: $userNavBtnBg;
+    border-radius: 15px;
+
+    svg {
+      position: absolute;
+      top: 6px;
+      left: 16px;
+
+      fill: $dftColor;
+    }
+
+    &:hover {
+      color: $hoverColor;
+
+      background-color: $hoverBgColor;
+    }
+
+    &:hover svg {
+      fill: $hoverSvgFill;
+    }
+
+    &--search {
+      width: 32px;
+      padding: 0;
+
+      font-size: 0rem;
+
+      border-radius: 50%;
+
+      svg {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        margin: auto;
+      }
+    }
+
+    &--login {
+      width: 92px;
+      padding-right: 16px;
+    }
+
+    &--logoff {
+      svg polygon {
+        transform: rotate(180deg) translateX(-8px);
+        transform-origin: left;
+      }
+    }
+
+    &--cart {
+      width: 117px;
+      padding-right: 34px;
+    }
   }
 
   &__form-search {
@@ -89,5 +250,27 @@
 
   &__second-layer {
     float: right;
+  }
+
+  &__contacts {
+    width: 170px;
+
+    font-weight: 700;
+    text-align: right;
+  }
+
+  &__work-time {
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 0.875rem;
+    line-height: 1.142857;
+  }
+
+  &__phone {
+    display: block;
+
+    font-size: 1.375rem;
+    line-height: 1.090909;
   }
 }
