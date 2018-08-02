@@ -1,0 +1,76 @@
+$ctrlBtnBorder: rgb(255, 255, 255);
+
+.slider {
+  position: relative;
+
+  padding: 0 2.25%;
+
+  &__list {
+    position: relative;
+
+    min-height: 275px;
+  }
+
+  &__item {
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    padding-top: 60px;
+
+    &--1 {
+      z-index: 1;
+    }
+  }
+
+  &__item-title {
+    display: block;
+    width: 700px;
+    margin: 0 auto;
+
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__control-list {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+
+    display: flex;
+  }
+
+  &__control-item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    z-index: 10;
+
+    width: 280px;
+    min-height: 64px;
+    margin-left: -140px;
+
+    font-size: 2rem;
+    line-height: 2;
+
+    border-radius: 28px;
+  }
+
+  &__control-btn {
+    width: 21px;
+    height: 21px;
+
+    font-size: 0rem;
+
+    border: 2px solid $ctrlBtnBorder;
+    border-radius: 50%;
+  }
+}

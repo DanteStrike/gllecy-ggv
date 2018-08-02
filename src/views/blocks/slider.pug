@@ -6,8 +6,8 @@ include ./block-init.pug
     - var inc = 0
     each objSlide in slider.promoSlides
       - inc++
-      li.slider__slide(class="slider__slide--" + inc)
-        h3.slider__slide-title
+      li.slider__item(class="slider__item--" + inc)
+        h3.slider__item-title
           | #{objSlide.title}
   a.slider__button.button(href="#")
     | Давайте оба!
