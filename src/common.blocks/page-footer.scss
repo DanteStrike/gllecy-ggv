@@ -1,6 +1,7 @@
 $dftBgSocial: rgb(255, 255, 255);
 $dftBorderSocial: rgba(255, 255, 255, 0.62);
 $dftColor: rgb(255, 255, 255);
+$hoverActiveLink: rgb(255, 188, 158);
 
 .page-footer {
   display: flex;
@@ -98,6 +99,15 @@ $dftColor: rgb(255, 255, 255);
       background-color: $dftColor;
       opacity: 0.2;
     }
+
+    &:hover,
+    &:active {
+      color: $hoverActiveLink;
+
+      &::after {
+        background-color: $hoverActiveLink;
+      }
+    }
   }
 
   &__copyright {
@@ -142,6 +152,15 @@ $dftColor: rgb(255, 255, 255);
 
       background-color: $dftColor;
       opacity: 0.2;
+    }
+
+    &:hover,
+    &:active {
+      color: $hoverActiveLink;
+
+      &::after {
+        background-color: $hoverActiveLink;
+      }
     }
   }
 }
