@@ -1,0 +1,147 @@
+$dftBgSocial: rgb(255, 255, 255);
+$dftBorderSocial: rgba(255, 255, 255, 0.62);
+$dftColor: rgb(255, 255, 255);
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  min-height: 103px;
+  padding-top: 18px;
+  padding-right: 2.25%;
+  padding-left: calc(2.25% + 1px);
+
+  &__socials-list {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 18px;
+  }
+
+  &__socials-item {
+    &:not(:last-child) {
+      margin-right: 11px;
+    }
+  }
+
+  &__socials-link {
+    display: block;
+    width: 38px;
+    height: 38px;
+
+    font-size: 0rem;
+
+    border: 3px solid $dftBorderSocial; // 62% * 0.8 = 50%
+    border-radius: 50%;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      box-shadow: inset 0 2px 1px 0 rgba(136, 136, 136, 1);
+      opacity: 1;
+    }
+
+    &--twit {
+      background: url('../img/twit.svg') no-repeat;
+    }
+
+    &--inst {
+      background: url('../img/inst.svg') no-repeat;
+    }
+
+    &--fb {
+      background: url('../img/fb.svg') no-repeat;
+    }
+
+    &--vk {
+      background: url('../img/vk.svg') no-repeat;
+    }
+  }
+
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 305px;
+    height: 40px;
+    margin-top: 16px;
+  }
+
+  &__info-item {
+    &:first-child {
+      margin-right: 28px;
+    }
+  }
+
+  &__info-link {
+    position: relative;
+
+    display: block;
+    padding-left: 4px;
+
+    font-size: 0.8125rem;
+    line-height: 1.384615;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 4px;
+
+      width: auto;
+      height: 1px;
+
+      background-color: $dftColor;
+      opacity: 0.2;
+    }
+  }
+
+  &__copyright {
+    padding-top: 1px;
+
+    text-align: left;
+  }
+
+  &__copyright-logo {
+    display: block;
+    width: 108px;
+    height: 38px;
+    margin-bottom: 3px;
+    margin-left: 2px;
+
+    font-size: 0rem;
+
+    background: url('../img/logo-htmlacademy-small.svg') no-repeat;
+  }
+
+  &__copyright-text {
+    display: inline-block;
+
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  &__copyright-link {
+    position: relative;
+
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 1px;
+      left: 0;
+
+      width: auto;
+      height: 1px;
+
+      background-color: $dftColor;
+      opacity: 0.2;
+    }
+  }
+}
