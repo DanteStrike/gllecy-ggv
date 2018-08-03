@@ -4,18 +4,19 @@ include ./block-init.pug
 ul.products(class=[mix, max])
   each product in products
     li.products__product(class= product.hit ? "products__product--hit" : "")
-      img.products__product-img(src=product.imgURL, alt=product.title, width="267", hieght="267")
-      p.products__product-property
-        span.products__product-cost
-          | #{product.cost}
-        span.products__p
-        span.products__product-weight-metr
-          | /кг
-      a.products__product-title
+      .products__img-wrap
+        img.products__product-img(src=product.imgURL, alt=product.title, width="267", hieght="267")
+        p.products__product-property
+          span.products__product-cost
+            | #{product.cost}
+          span.products__p
+          span.products__product-weight-metr
+            | /кг
+      a.products__product-title(href="#")
         | #{product.title}
       .products__product-hover
         button.products__button.button
-          | Быстрый просмотр
+          | Быстрый&nbsp;просмотр
 
 
 

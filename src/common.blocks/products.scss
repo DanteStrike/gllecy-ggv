@@ -1,3 +1,5 @@
+$titleBorder: rgba(255, 255, 255, 0.2);
+
 .products {
   display: flex;
   justify-content: space-between;
@@ -7,15 +9,39 @@
     position: relative;
 
     width: 23.3%;
+
+    text-align: center;
+
+    &:hover .products__product-hover {
+      z-index: 1;
+    }
+
+    &--hit::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 61px;
+      height: 61px;
+
+      background: url('../img/hit.svg') no-repeat;
+    }
+  }
+
+  &__img-wrap {
+    position: relative;
   }
 
   &__product-img {
+    margin-bottom: 9px;
+
     border-radius: 50%;
   }
 
   &__product-property {
     position: absolute;
-    top: 208px;
+    bottom: 22px;
     left: 0;
 
     min-height: 35px;
@@ -43,5 +69,42 @@
   &__product-weight-metr {
     font-size: 1.875rem;
     line-height: 1.5;
+  }
+
+  &__product-title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.375;
+
+    border-bottom: 1px solid $titleBorder;
+  }
+
+  &__product-hover {
+    position: absolute;
+    top: 0;
+    left: -4.87%;
+    z-index: -10;
+
+    width: 110.1%;
+    height: 125%;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 5.4%;
+    left: 50%;
+
+    min-height: 44px;
+    padding: 0 5.4%;
+
+    font-size: 1.125rem;
+    line-height: 1.333333;
+
+    border-radius: 16px/24px;
+    transform: translateX(-50%);
   }
 }
