@@ -1,0 +1,47 @@
+.products {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.25%;
+
+  &__product {
+    position: relative;
+
+    width: 23.3%;
+  }
+
+  &__product-img {
+    border-radius: 50%;
+  }
+
+  &__product-property {
+    position: absolute;
+    top: 208px;
+    left: 0;
+
+    min-height: 35px;
+
+    font-weight: 700;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
+  }
+
+  &__product-cost {
+    font-size: 2.8125rem;
+    line-height: 1;
+  }
+
+  &__p {
+    display: inline-block;
+    width: 28px;
+    height: 32px;
+
+    vertical-align: baseline;
+
+    background: url('../img/p.svg') no-repeat;
+  }
+
+  &__product-weight-metr {
+    font-size: 1.875rem;
+    line-height: 1.5;
+  }
+}
