@@ -2,12 +2,12 @@
 - var mod = ""
 
 doctype html
-html(lang="en")
+html(lang="ru")
 
   include ./init/head.pug
 
   body.index
-  .container
+    .container
       - var mix = "index"
       - var mod = ""
       include ./blocks/page-header.pug
@@ -40,51 +40,55 @@ html(lang="en")
           - var mod = ""
           include ./blocks/products.pug
 
-        section.about.page-main__about
-          h2.abous__section-title.visually-hidden
-            | О магазине "Glaccy Shope"
-          strong.about__title
-            | Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
-          each featur, index in featurs
-            p.about__featur(class="about__featur--" + index)
-              | #{featur}
+        .container-padding
+          section.about.page-main__about
+            h2.about__section-title.visually-hidden
+              | О магазине "Glaccy Shope"
+            strong.about__title
+              | Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
+            .about__featurs
+              each featur, index in featurs
+                p.about__featur(class="about__featur--" + index)
+                  | #{featur}
 
-        section.blog.page-main__blog
-          h2.blog__section-title
-            | Новое в нашем блоге
-          p.blog__title
-            | #{blogTitle}
+        .page-main__row
+          section.blog.page-main__blog
+            h2.blog__section-title
+              | Новое в нашем блоге
+            .blog__wrap
+              a.blog__link(href=blog.url)
+                | #{blog.title}
 
-        section.dispatch.page-main__dispatch
-          h2.dispatch__section-title
-            | Подписка
-          p.dispatch__description
-            | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
-            | всего самого вкусного, что у нас происходит. Обещаем не спамить
-            | и не слать всякой ненужной ерунды. Честно =)
-          form.dispatch.dispatch__form(action="GET", method="https://echo.htmlacademy.ru")
-            label.dispatch__form-label.visually-hidden(for="dispatch__form-input") Электронная почта
-            input.dispatch__form-input(id="dispatch__form-input", type="email", name="dispatch__form-input")
-            button.dispatch__form-button.button(type="submit") Отправить
+          section.dispatch.page-main__dispatch
+            .dispatch__content
+              h2.dispatch__section-title.visually-hidden
+                | Подписка
+              p.dispatch__description
+                | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
+                | всего самого вкусного, что у нас происходит. Обещаем не спамить
+                | и не слать всякой ненужной ерунды. Честно =)
+              form.dispatch__form(method="GET", action="https://echo.htmlacademy.ru")
+                label.dispatch__form-label.visually-hidden(for="dispatch__form-input") Электронная почта
+                input.dispatch__form-input(id="dispatch__form-input", type="email", name="dispatch__form-input", placeholder="Электронная почта")
+                button.dispatch__form-button.button(type="submit") Отправить
 
         section.contacts.page-main__contacts
-          h2.contacts__section-title
+          h2.contacts__section-title.visually-hidden
             | Контактные данные
           .contacts__map
-            iframe(src="https://yandex.ru/map-widget/v1/-/CBu0V4U1cB", frameborder="1", allowfullscreen="true")
+            iframe(src="https://yandex.ru/map-widget/v1/-/CBuwIUgh-C")
           .contacts__feedback
-            p.contacts__feedback-text
-              span.contacts__feedback-top
-                | Адрес главного офиса
-                | и офлайн магазина:
-              address.contacts__feedback-address
-                | ул. Большая Конюшенная 19/8, Санкт-Петербург
-              span.contacts__feedback-middle
-                | Для заказов по телефону:
-              address.contacts__feedback-phone
-                | 8 812 450-25-25
-              span.contacts__feedback-time
-                | (с 10 до 20 ежедневно)
+            span.contacts__feedback-top
+              | Адрес главного офиса
+              | и офлайн магазина:
+            address.contacts__feedback-address
+              | ул. Большая Конюшенная 19/8, Санкт-Петербург
+            span.contacts__feedback-middle
+              | Для заказов по телефону:
+            address.contacts__feedback-phone
+              | 8 812 450-25-25
+            span.contacts__feedback-time
+              | (с 10 до 20 ежедневно)
             button.contacts__button.button
               | Форма обратной связи
 

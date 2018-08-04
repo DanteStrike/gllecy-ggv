@@ -2,7 +2,7 @@
 - var mod = ""
 
 doctype html
-html(lang="en")
+html(lang="ru")
 
   include ./init/head.pug
 
@@ -33,7 +33,7 @@ html(lang="en")
       h2.filters__title.visually-hidden
         | Фильтры для выборки
 
-      form.filters__form(action="GET", method="https://echo.htmlacademy.ru")
+      form.filters__form(method="GET", action="https://echo.htmlacademy.ru")
         include ./blocks/filter-sort.pug
         include ./blocks/filter-price.pug
         include ./blocks/filter-fat.pug

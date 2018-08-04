@@ -5,7 +5,7 @@ ul.products(class=[mix, max])
   each product in products
     li.products__product(class= product.hit ? "products__product--hit" : "")
       .products__img-wrap
-        img.products__product-img(src=product.imgURL, alt=product.title, width="267", hieght="267")
+        img.products__product-img(src=product.imgURL, alt=product.title, width="267", height="267")
         p.products__product-property
           span.products__product-cost
             | #{product.cost}

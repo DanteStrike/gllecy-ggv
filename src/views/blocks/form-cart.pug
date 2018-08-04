@@ -1,7 +1,7 @@
 - var blockName = "form-search"
 include ./block-init.pug
 
-form.form-cart(class=[mix, mod], action="GET", method="https://echo.htmlacademy.ru")
+form.form-cart(class=[mix, mod], method="GET", action="https://echo.htmlacademy.ru")
   ul.form-cart__product-list
     each product in user.products
       li.form-cart__product-item
