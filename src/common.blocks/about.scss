@@ -1,0 +1,62 @@
+$sectionMainColor: rgb(50, 50, 50);
+
+.about {
+  min-height: 306px;
+  padding: 24px 20px 0 20px;
+
+  color: $sectionMainColor;
+
+  background: url('../img/pattern--wafer.jpg') left top repeat;
+  border-radius: 15px;
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  &__featurs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__featur {
+    position: relative;
+
+    width: 48.8%;
+    margin-bottom: 23px;
+    padding-left: 56px;
+
+    line-height: 1.375;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+
+      width: 49px;
+      height: 49px;
+    }
+
+    &--ice::before {
+      background: url('../img/ice-cream.svg') no-repeat;
+    }
+
+    &--cow::before {
+      background: url('../img/cow.svg') no-repeat;
+    }
+
+    &--eco::before {
+      background: url('../img/paper.svg') no-repeat;
+    }
+
+    &--cold::before {
+      background: url('../img/metr.svg') no-repeat;
+    }
+  }
+}
