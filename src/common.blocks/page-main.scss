@@ -8,6 +8,26 @@
   }
 
   &__hits {
+    margin-bottom: 39px;
+  }
+
+  &__about {
+    margin-bottom: 39px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    min-height: 220px;
     margin-bottom: 40px;
+    padding: 0 2.25%;
+  }
+
+  &__blog {
+    width: 48.86%;
+  }
+
+  &__dispatch {
+    width: 48.86%;
   }
 }
