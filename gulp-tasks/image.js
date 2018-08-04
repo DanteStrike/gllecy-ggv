@@ -23,3 +23,16 @@ gulp.task('image:public', function () {
       .pipe(gulp.dest(path.public.img)) //И бросим в public/assets
       .pipe(reload({stream: true}));
 });
+
+gulp.task('svg:minify', function () {
+  return gulp.src(path.src.svg) //Выберем наши картинки
+      .pipe(
+        imageMin({ //Сожмем их
+          progressive: true,
+          svgoPlugins: [{removeViewBox: false}],
+          use: [pngquant()],
+          interlaced: true
+        }))
+      .pipe(gulp.dest(path.src.svgLoc))
+      .pipe(reload({stream: true}));
+});

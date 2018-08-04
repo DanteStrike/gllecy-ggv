@@ -31,6 +31,9 @@ const PATH = {
     jsMain: __dirname + '/src/js/main.js',
 
     img: __dirname + '/src/img/*.*',
+    svg: __dirname + '/src/img/*.svg',
+    svgLoc: __dirname + '/src/img/',
+
     font: __dirname + '/src/font/*.*'
   },
   clean: __dirname + '/public'
