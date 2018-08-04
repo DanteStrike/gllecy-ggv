@@ -1,0 +1,80 @@
+$dftColor: rgb(50, 50, 50);
+$dftBgFb: rgb(253, 254, 254);
+
+.contacts {
+  position: relative;
+
+  &__map {
+    height: 430px;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__feedback {
+    position: absolute;
+    top: 62px;
+    right: 2.25%;
+
+    width: 300px;
+    height: 305px;
+    padding: 30px 24px;
+
+    color: $dftColor;
+
+    background-color: $dftBgFb;
+    border-radius: 15px;
+  }
+
+  &__feedback-top {
+    display: block;
+    width: 150px;
+    margin-bottom: 3px;
+
+    font-size: 0.875rem;
+    line-height: 1.428571;
+  }
+
+  &__feedback-address {
+    display: block;
+    margin-bottom: 19px;
+
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.333333;
+    font-style: normal;
+  }
+
+  &__feedback-middle {
+    display: block;
+    margin-bottom: 7px;
+
+    font-size: 0.875rem;
+    line-height: 1.428571;
+  }
+
+  &__feedback-phone {
+    display: block;
+    margin-bottom: 2px;
+
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.222222;
+    font-style: normal;
+  }
+
+  &__feedback-time {
+    display: block;
+    margin-bottom: 22px;
+
+    font-size: 0.875rem;
+    line-height: 1.571429;
+  }
+
+  &__button {
+    width: 250px;
+    min-height: 44px;
+    margin: 0 auto;
+  }
+}
