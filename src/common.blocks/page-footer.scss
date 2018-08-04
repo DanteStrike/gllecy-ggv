@@ -7,7 +7,7 @@ $hoverActiveLink: rgb(255, 188, 158);
   display: flex;
   justify-content: space-between;
   min-height: 103px;
-  padding-top: 18px;
+  padding-top: 17px;
   padding-right: 2.25%;
   padding-left: calc(2.25% + 1px);
 
@@ -106,6 +106,25 @@ $hoverActiveLink: rgb(255, 188, 158);
 
       &::after {
         background-color: $hoverActiveLink;
+      }
+    }
+
+    &--with-love {
+      font-weight: 700;
+
+      svg {
+        position: absolute;
+        top: 3px;
+        left: -18px;
+
+        width: 15px;
+        height: 13px;
+
+        fill: $dftColor;
+      }
+
+      &:hover svg {
+        fill: $hoverActiveLink;
       }
     }
   }
