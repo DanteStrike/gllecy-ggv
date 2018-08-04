@@ -2,6 +2,7 @@ $fontFamily: "Roboto", "Georgia", sans-serif;
 
 body,
 html {
+  min-width: 900px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -72,7 +73,6 @@ button {
 
   background: none;
   border: none;
-  outline: 0;
   cursor: pointer;
 
   // Remove outiline bug in Firefox
