@@ -1,0 +1,38 @@
+$dftColor: rgb(50, 50, 50);
+$hoverLink: rgb(232, 77, 55);
+$dftBgColor: rgb(255, 255, 255);
+
+.blog {
+  padding: 22px 0 25px 20px;
+
+  text-align: left;
+  color: $dftColor;
+
+  background: url('../img/blog.jpg') no-repeat;
+  background-color: $dftBgColor;
+  border-radius: 15px;
+
+  &__section-title {
+    margin-bottom: 4px;
+
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.375;
+  }
+
+  &__wrap {
+    width: 280px;
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    color: $dftColor;
+    text-decoration: underline;
+
+    &:hover,
+    &:active {
+      color: $hoverLink;
+    }
+  }
+}
