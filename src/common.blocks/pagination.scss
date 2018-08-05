@@ -1,0 +1,49 @@
+.pagination {
+  padding-right: 2.25%;
+  &__menu {
+    width: 135px;
+    margin-left: auto;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__control-link {
+    display: block;
+    width: 6px;
+    height: 12px;
+
+    font-size: 0rem;
+  }
+
+  &__link {
+    display: block;
+    width: 26px;
+    height: 26px;
+
+    font-size: 1rem;
+    line-height: 26px;
+    text-align: center;
+
+    border-radius: 50%;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__current {
+    display: block;
+    width: 26px;
+    height: 26px;
+
+    font-size: 1rem;
+    line-height: 26px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+}

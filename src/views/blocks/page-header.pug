@@ -10,7 +10,7 @@ header.page-header(class=[mix, mod])
         each objLink in headerNavMenuLinks
           li.page-header__nav-menu-item
             a.page-header__nav-menu-link(
-              class = "page-header__nav-link--current" && (objLink.url == activePageUrl),
+              class = (objLink.url == activePageUrl) && "page-header__nav-menu-link--current",
               href = objLink.url
             )
               | #{objLink.name}
@@ -25,7 +25,7 @@ header.page-header(class=[mix, mod])
                   else
                     li.page-header__submenu-item
                       a.page-header__submenu-link(
-                        class = "page-header__submenu-link--current" && (objSubLink.url == activePageUrl),
+                        class = (objSubLink.url == activePageUrl) && "page-header__submenu-link--current",
                         href = objSubLink.url
                       )
                         | #{objSubLink.name}

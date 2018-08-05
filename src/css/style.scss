@@ -7,6 +7,8 @@
 
 @import '../common.blocks/button.scss';
 
+@import '../common.blocks/index.scss';
+@import '../common.blocks/catalog.scss';
 @import '../common.blocks/page-header.scss';
 
 @import '../common.blocks/page-main.scss';
@@ -18,5 +20,13 @@
 @import '../common.blocks/blog.scss';
 @import '../common.blocks/dispatch.scss';
 @import '../common.blocks/contacts.scss';
+
+@import '../common.blocks/breadcrumbs.scss';
+@import '../common.blocks/filters.scss';
+@import '../common.blocks/filter-fat.scss';
+@import '../common.blocks/filter-price.scss';
+@import '../common.blocks/filter-sort.scss';
+@import '../common.blocks/filter-type.scss';
+@import '../common.blocks/pagination.scss';
 
 @import '../common.blocks/page-footer.scss';

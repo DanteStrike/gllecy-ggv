@@ -1,0 +1,30 @@
+.breadcrumbs {
+  padding-left: 2.25%;
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: block;
+
+    font-size: 0.875rem;
+    line-height: 1.142857;
+
+    &:not(:first-child) {
+      position: relative;
+
+      margin-left: 22px;
+
+      &::before {
+        content: '»';
+        position: absolute;
+        top: 0;
+        left: -14px;
+
+        display: block;
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+}
