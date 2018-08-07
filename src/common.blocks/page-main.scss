@@ -32,6 +32,13 @@
   }
 
   &__breadcrumbs {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    padding-left: 2.25%;
+
+    font-size: 2.1875rem;
+    line-height: 1.171429;
   }
 }
