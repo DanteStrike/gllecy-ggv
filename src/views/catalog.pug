@@ -7,7 +7,8 @@ html(lang="ru")
   include ./init/head.pug
 
   body.catalog
-    .container
+    .top-light
+    .container.catalog__container
       - var mix = "catalog"
       - var mod = ""
       include ./blocks/page-header.pug
@@ -30,18 +31,18 @@ html(lang="ru")
           | #{pageTitle}
 
         section.filters
-        h2.filters__title.visually-hidden
-          | Фильтры для выборки
+          h2.filters__title.visually-hidden
+            | Фильтры для выборки
 
-        form.filters__form(method="GET", action="https://echo.htmlacademy.ru")
-          - var mix = "filters"
-          - var mod = ""
-          include ./blocks/filter-sort.pug
-          include ./blocks/filter-price.pug
-          include ./blocks/filter-fat.pug
-          include ./blocks/filter-type.pug
-          button.filters__form-button.button(type='submit')
-            | Применить
+          form.filters__form(method="GET", action="https://echo.htmlacademy.ru")
+            - var mix = "filters"
+            - var mod = ""
+            include ./blocks/filter-sort.pug
+            include ./blocks/filter-price.pug
+            include ./blocks/filter-fat.pug
+            include ./blocks/filter-type.pug
+            button.filters__form-button.button(type='submit')
+              | Применить
 
 
         section.catalog.page-main__catalog
