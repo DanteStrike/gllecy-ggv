@@ -1,0 +1,77 @@
+$dftColor: rgb(255, 255, 255);
+
+.filter-price {
+  &__wrap {
+    margin-bottom: 3px;
+    padding-left: 15px;
+
+    font-size: 0;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+      /* display: none; <- Crashes Chrome on hover */
+
+      -webkit-appearance: none;
+    }
+  }
+
+  &__title {
+    float: left;
+    margin-right: 5px;
+
+    font-size: 0.875rem;
+    line-height: 1.142857;
+    vertical-align: top;
+  }
+
+  &__min {
+    display: inline-block;
+    width: 25px;
+    margin-right: 2px;
+
+    font-size: 0.875rem;
+    line-height: 1.142857;
+    vertical-align: top;
+    color: $dftColor;
+  }
+
+  &__metr {
+    display: inline-block;
+    margin-right: 5px;
+
+    font-size: 0.875rem;
+    line-height: 1.142857;
+    vertical-align: top;
+  }
+
+  &__sep {
+    display: inline-block;
+    margin-right: 5px;
+
+    font-size: 0.875rem;
+    line-height: 1.142857;
+    vertical-align: top;
+  }
+
+  &__max {
+    display: inline-block;
+    width: 25px;
+    margin-right: 2px;
+
+    font-size: 0.875rem;
+    line-height: 1.142857;
+    vertical-align: top;
+    color: $dftColor;
+  }
+
+  &__range {
+    width: 220px;
+    min-height: 36px;
+
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(169, 185, 175);
+    border: none;
+    border-radius: 18px;
+  }
+}
