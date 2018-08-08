@@ -1,0 +1,24 @@
+.filter-sort {
+  &__title {
+    display: block;
+    margin-bottom: 6px;
+    padding-left: 16px;
+
+    font-size: 0.875rem;
+    line-height: 1.142857;
+  }
+
+  &__select {
+    width: 193px;
+    min-height: 36px;
+    margin-right: 16px;
+    padding-right: 15px;
+    padding-left: 12px;
+
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(169, 185, 175);
+    border: none;
+    border-radius: 18px;
+  }
+}
