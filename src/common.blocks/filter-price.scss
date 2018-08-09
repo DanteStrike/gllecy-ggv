@@ -1,4 +1,9 @@
 $dftColor: rgb(255, 255, 255);
+$rangeBg: rgb(169, 185, 175);
+$rangeColorEmpty: rgba(255, 255, 255, 0.5);
+$rangeColor: rgba(255, 255, 255, 1);
+$toggleBg: rgba(255, 255, 255, 1);
+$toggleBgInner: rgba(171, 171, 171, 1);
 
 .filter-price {
   &__wrap {
@@ -66,12 +71,68 @@ $dftColor: rgb(255, 255, 255);
 
   &__range {
     width: 220px;
-    min-height: 36px;
+    height: 36px;
+    margin-right: 14px;
+    padding-top: 16px;
 
-    color: rgb(255, 255, 255);
-
-    background-color: rgb(169, 185, 175);
+    background-color: $rangeBg;
     border: none;
     border-radius: 18px;
+  }
+
+  &__range-bar {
+    position: relative;
+
+    width: 176px;
+    height: 4px;
+    margin: auto;
+
+    background-color: $rangeColorEmpty;
+  }
+
+  &__range-scale {
+    width: 55.7%;
+    height: inherit;
+    margin-left: 23px;
+
+    background-color: $rangeColor;
+  }
+
+  &__range-toggle {
+    position: absolute;
+    top: calc(-50% + 4px);
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: $toggleBg;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      display: block;
+      width: 4px;
+      height: 4px;
+      margin-top: -2px;
+      margin-left: -2px;
+
+      background-color: $toggleBgInner;
+      border-radius: 50%;
+    }
+
+    &--min {
+      left: 13px;
+    }
+
+    &--max {
+      left: 111px;
+    }
   }
 }
