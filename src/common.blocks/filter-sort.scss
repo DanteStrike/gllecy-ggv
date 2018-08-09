@@ -1,24 +1,53 @@
 .filter-sort {
   &__title {
     display: block;
-    margin-bottom: 6px;
-    padding-left: 16px;
+    margin-bottom: 7px;
+    padding-left: 17px;
 
     font-size: 0.875rem;
     line-height: 1.142857;
   }
 
+  &__select-wrap {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 29px;
+
+      display: block;
+      width: 0;
+      height: 0;
+
+      border-top: 10px solid rgb(255, 255, 255);
+      border-right: 5.5px solid transparent;
+      border-left: 5.5px solid transparent;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+
   &__select {
     width: 193px;
     min-height: 36px;
-    margin-right: 16px;
-    padding-right: 15px;
-    padding-left: 12px;
+    margin-right: 15px;
+    padding-left: 15px;
 
     color: rgb(255, 255, 255);
 
     background-color: rgb(169, 185, 175);
     border: none;
     border-radius: 18px;
+    cursor: pointer;
+    //REMUVE arrow
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
   }
 }

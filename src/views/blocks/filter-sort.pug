@@ -6,12 +6,13 @@ fieldset.filter-sort(class=[mix, mod])
     | Сортировка:
   label.visually-hidden(for="select-sort")
     | Варианты сортировки
-  select.filter-sort__select(id="select-sort", name="select-sort")
-    each option, index in ["по популярности", "по названию", "по цене"]
-      if index == 0
-        option(value = index, selected)
-          | #{option}
-      else
-        option(value = index)
-          | #{option}
+  .filter-sort__select-wrap
+    select.filter-sort__select(id="select-sort", name="select-sort")
+      each option, index in ["по популярности", "по названию", "по цене"]
+        if index == 0
+          option(value = index, selected)
+            | #{option}
+        else
+          option(value = index)
+            | #{option}
 
