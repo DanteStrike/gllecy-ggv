@@ -3,30 +3,6 @@
     display: block;
     margin-bottom: 7px;
     padding-left: 17px;
-
-    font-size: 0.875rem;
-    line-height: 1.142857;
-  }
-
-  &__select-wrap {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 29px;
-
-      display: block;
-      width: 0;
-      height: 0;
-
-      border-top: 10px solid rgb(255, 255, 255);
-      border-right: 5.5px solid transparent;
-      border-left: 5.5px solid transparent;
-      transform: translateY(-50%);
-      cursor: pointer;
-    }
   }
 
   &__select {
@@ -35,8 +11,12 @@
     margin-right: 15px;
     padding-left: 15px;
 
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.125;
     color: rgb(255, 255, 255);
 
+    background: url('../img/icon-down-dir-white.svg') 168px 13px no-repeat;
     background-color: rgb(169, 185, 175);
     border: none;
     border-radius: 18px;
@@ -48,6 +28,13 @@
             appearance: none;
     &::-ms-expand {
       display: none;
+    }
+
+    &:hover {
+      color: rgb(0, 0, 0);
+
+      background-color: rgb(255, 255, 255);
+      background-image: url('../img/icon-down-dir-black.svg');
     }
   }
 }
