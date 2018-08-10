@@ -6,11 +6,11 @@ fieldset.filter-fat(class=[mix, mod])
     | Жирность:
   .filter-fat__wrap
     each radio, index in fatSort
-      input.filter-fat__radio(
+      input.filter-fat__radio.visually-hidden(
         id="filter-fat__radio--" + index,
         type="radio",
         name="filter-fat",
         checked= (index == 0) ? true : false
         )
-      label(for="filter-fat__radio--" + index)
+      label.filter-fat__label(for="filter-fat__radio--" + index)
         | #{radio}
