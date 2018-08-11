@@ -1,7 +1,25 @@
 .catalog {
   position: relative;
+
   &__page-header {
     margin-bottom: 27px;
+  }
+
+  &__page-footer {
+    position: relative;
+
+    min-height: 107px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 2.25%;
+
+      width: 95.5%;
+      height: 1px;
+
+      background-color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
