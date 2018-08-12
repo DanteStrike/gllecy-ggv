@@ -30,7 +30,7 @@ html(lang="ru")
           h1.page-main__title
             | #{pageTitle}
 
-          section.filters
+          section.filters.page-main__filters
             h2.filters__title.visually-hidden
               | Фильтры для выборки
 
@@ -38,8 +38,14 @@ html(lang="ru")
               - var mix = "filters"
               - var mod = ""
               include ./blocks/filter-sort.pug
+              - var mix = "filters"
+              - var mod = ""
               include ./blocks/filter-price.pug
+              - var mix = "filters"
+              - var mod = ""
               include ./blocks/filter-fat.pug
+              - var mix = "filters"
+              - var mod = ""
               include ./blocks/filter-type.pug
               button.filters__form-button.button(type='submit')
                 | Применить
@@ -56,7 +62,6 @@ html(lang="ru")
           - var mod = ""
           include ./blocks/pagination.pug
 
-
-        - var mix = ""
+        - var mix = "catalog"
         - var mod = ""
         include ./blocks/page-footer.pug
