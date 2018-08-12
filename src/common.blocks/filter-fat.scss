@@ -19,6 +19,12 @@ $wrapBg: rgb(169, 185, 175);
     background-color: $wrapBg;
     border-radius: 18px;
   }
+
+  &__radio:checked + &__label::before {
+    background: url('../img/radio-on.svg') no-repeat;
+    background-size: 100% auto;
+  }
+
   &__label {
     position: relative;
 
@@ -37,7 +43,7 @@ $wrapBg: rgb(169, 185, 175);
       width: 22px;
       height: 22px;
 
-      background: url('../img/icons.svg') 0 -64px no-repeat;
+      background: url('../img/radio-off.svg') no-repeat;
       background-size: 100% auto;
     }
   }
