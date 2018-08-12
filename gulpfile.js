@@ -60,7 +60,7 @@ gulp.task('public', [
   'image:public'
 ]);
 
-gulp.task('public--hardreset', function(callback) {
+gulp.task('public:hard', function(callback) {
   runSequence('clean', 'public', callback);
 });
 
