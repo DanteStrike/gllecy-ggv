@@ -1,8 +1,9 @@
 .pagination {
   padding-right: 2.25%;
+
+  text-align: right;
   &__menu {
-    width: 135px;
-    margin-left: auto;
+    display: inline-block;
   }
 
   &__list {
@@ -11,15 +12,45 @@
 
   &__control-link {
     display: block;
-    width: 6px;
+    width: 8px;
     height: 12px;
+    margin-top: calc(50% - 5px);
 
     font-size: 0rem;
+
+    background: url('../img/icon-arrow-small.svg') no-repeat;
+    background-size: 100% auto;
+
+    &--prev {
+      margin-right: 15px;
+
+      transform: rotate(180deg);
+    }
+
+    &--next {
+      margin-left: 14px;
+    }
+
+    &--disable {
+      opacity: 0.2;
+
+      pointer-events: none;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2px;
+    }
   }
 
   &__link {
     display: block;
-    width: 26px;
+    width: 27px;
     height: 26px;
 
     font-weight: 500;
