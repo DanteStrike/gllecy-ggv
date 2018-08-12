@@ -5,12 +5,12 @@ $wrapBg: rgb(169, 185, 175);
   &__title {
     display: block;
     margin-bottom: 7px;
-    padding-left: 17px;
+    padding-left: 16px;
   }
   &__wrap {
     display: flex;
     height: 36px;
-    padding-top: 11px;
+    padding-top: 10px;
     padding-left: 14px;
 
     font-size: 1rem;
@@ -37,7 +37,7 @@ $wrapBg: rgb(169, 185, 175);
     &::before {
       content: '';
       position: absolute;
-      top: 0;
+      top: -3px;
       left: 0;
 
       width: 22px;
