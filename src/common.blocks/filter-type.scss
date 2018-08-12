@@ -1,0 +1,55 @@
+$wrapBg: rgb(169, 185, 175);
+
+.filter-type {
+  &__title {
+    display: block;
+    margin-bottom: 7px;
+    padding-left: 16px;
+  }
+
+  &__wrap {
+    display: flex;
+    height: 36px;
+    padding-top: 10px;
+    padding-left: 16px;
+
+    font-size: 1rem;
+    line-height: 1.125;
+
+    background-color: $wrapBg;
+    border-radius: 18px;
+  }
+
+  &__checkbox:checked + &__label::before {
+    width: 23px;
+
+    background: url('../img/checkbox-on.svg') no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__label {
+    position: relative;
+
+    display: block;
+    margin-right: 21px;
+    padding-left: 32px;
+
+    cursor: pointer;
+    &:last-child {
+      margin-right: 19px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 0;
+
+      width: 20px;
+      height: 20px;
+
+      background: url('../img/checkbox-off.svg') no-repeat;
+      background-size: 100% auto;
+    }
+  }
+}
