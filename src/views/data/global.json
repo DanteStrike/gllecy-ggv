@@ -4,21 +4,21 @@
   "user": {
     "auth":"false",
 
-    "cartEmpty": "true",
+    "cartEmpty": "false",
     "cartTitle": "2 товара",
     "totalPrice": "750",
 
     "products": [
       {
         "title": "Пломбир с апельсиновым джемом",
-        "imgURL": "#",
+        "imgURL": "/assets/img/ice-cream--1.jpg",
         "cost": "200",
         "weight": "1,5",
         "fullPrice": "450"
       },
       {
         "title": "Клубничный пломбир с присыпкой из белого шоколада",
-        "imgURL": "#",
+        "imgURL": "/assets/img/ice-cream--3.jpg",
         "cost": "200",
         "weight": "1,5",
         "fullPrice": "300"

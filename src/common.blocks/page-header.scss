@@ -148,7 +148,7 @@ $hoverSvgFill: rgb(0, 0, 0);
   }
 
   &__nav-menu-item:hover &__submenu {
-    z-index: 1;
+    z-index: 10;
   }
 
   &__nav-user {
@@ -161,9 +161,28 @@ $hoverSvgFill: rgb(0, 0, 0);
   }
 
   &__nav-user-item {
+    position: relative;
+
+    padding-bottom: 4px;
+
+    border-radius: 50%;
     &:not(:last-child) {
       margin-right: 10px;
     }
+  }
+
+  &__nav-user-item:hover &__nav-user-link {
+    color: $hoverColor;
+
+    background-color: $hoverBgColor;
+  }
+
+  &__nav-user-item:hover svg {
+    fill: $hoverSvgFill;
+  }
+
+  &__nav-user-item:hover form {
+    z-index: 10;
   }
 
   &__nav-user-link {
@@ -187,16 +206,6 @@ $hoverSvgFill: rgb(0, 0, 0);
       left: 16px;
 
       fill: $dftColor;
-    }
-
-    &:hover {
-      color: $hoverColor;
-
-      background-color: $hoverBgColor;
-    }
-
-    &:hover svg {
-      fill: $hoverSvgFill;
     }
 
     &--search {
@@ -231,20 +240,37 @@ $hoverSvgFill: rgb(0, 0, 0);
 
     &--cart {
       width: 117px;
-      padding-right: 34px;
+      padding-left: 44px;
+
+      text-align: left;
+    }
+
+    &--active {
+      color: $hoverColor;
+
+      background-color: $hoverBgColor;
     }
   }
 
   &__form-search {
-    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: -1;
   }
 
   &__form-auth {
-    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: -1;
   }
 
-  &__form-search {
-    display: none;
+  &__form-cart {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: -1;
   }
 
   &__second-layer {

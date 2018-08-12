@@ -58,16 +58,20 @@ header.page-header(class=[mix, mod])
             include ./user-profile.pug
 
         li.page-header__nav-user-item
-          a.page-header__nav-user-link.page-header__nav-user-link--cart(href="#")
-            include ../../img/cart-dis.svg
-
+          a.page-header__nav-user-link.page-header__nav-user-link--cart(
+            href="#"
+            class= (user.cartEmpty == "true") ? "" : "page-header__nav-user-link--active"
+            )
             if user.cartEmpty == "true"
+              include ../../img/cart-dis.svg
               | Пусто
             else
+              include ../../img/cart--act.svg
               | #{user.cartTitle}
               - var mix = "page-header"
               - var mod = ""
-              include ./form-cart
+          if user.cartEmpty != "true"
+            include ./form-cart
 
   .page-header__second-layer
     p.page-header__contacts

@@ -1,0 +1,43 @@
+$inputColor: rgb(50, 50, 50);
+$inputBorder: rgb(211, 211, 210);
+$placholderColor: rgb(153, 153, 153);
+
+.form-search {
+  padding: 20px 15px;
+  overflow: hidden;
+
+  background-color: rgb(248, 247, 244);
+  border-radius: 6px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+  &__input {
+    width: 315px;
+    height: 48px;
+    padding-left: 14px;
+
+    font-size: 0.875rem;
+    line-height: 1.714286;
+    color: $inputColor;
+
+    background-color: rgb(255, 255, 255);
+    border: 1px solid $inputBorder;
+    border-radius: 5px;
+
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: $placholderColor;
+    }
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: $placholderColor;
+    }
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: $placholderColor;
+    }
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: $placholderColor;
+    }
+  }
+}
