@@ -5,7 +5,7 @@ doctype html
 html(lang="ru")
 
   include ./init/head.pug
-
+  script(src="assets/js/main.js")
   body.index
     .container.index__container
       - var mix = "index"
@@ -95,3 +95,5 @@ html(lang="ru")
       - var mix = ""
       - var mod = ""
       include ./blocks/page-footer.pug
+
+

@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "esprima": "^4.0.0",
+    "focus-within": "^2.0.0",
     "gulp": "^3.9.1",
     "jquery": "^3.3.1"
   }
