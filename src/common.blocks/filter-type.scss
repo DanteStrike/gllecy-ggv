@@ -27,6 +27,12 @@ $wrapBg: rgb(169, 185, 175);
     background-size: 100% 100%;
   }
 
+  &__checkbox:focus + &__label::before {
+    -webkit-box-shadow: 0 0 0 2px rgba(77,144,254,1);
+       -moz-box-shadow: 0 0 0 2px rgba(77,144,254,1);
+            box-shadow: 0 0 0 2px rgba(77,144,254,1);
+  }
+
   &__label {
     position: relative;
 

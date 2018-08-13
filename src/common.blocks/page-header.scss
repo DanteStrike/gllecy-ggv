@@ -103,6 +103,11 @@ $hoverSvgFill: rgb(0, 0, 0);
     background-color: $hoverBgColor;
     border-radius: 5px;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+    &[focus-within],
+    &:focus-within {
+      z-index: 1;
+    }
   }
 
   &__submenu-title {
@@ -257,6 +262,11 @@ $hoverSvgFill: rgb(0, 0, 0);
     top: 100%;
     right: 0;
     z-index: -1;
+
+    &[focus-within],
+    &:focus-within {
+      z-index: 1;
+    }
   }
 
   &__form-auth {
@@ -264,6 +274,11 @@ $hoverSvgFill: rgb(0, 0, 0);
     top: 100%;
     right: 0;
     z-index: -1;
+
+    &[focus-within],
+    &:focus-within {
+      z-index: 1;
+    }
   }
 
   &__form-cart {
@@ -271,6 +286,11 @@ $hoverSvgFill: rgb(0, 0, 0);
     top: 100%;
     right: 0;
     z-index: -1;
+
+    &[focus-within],
+    &:focus-within {
+      z-index: 1;
+    }
   }
 
   &__second-layer {

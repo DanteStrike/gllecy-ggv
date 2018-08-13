@@ -7,7 +7,7 @@ section.pagination.page-main__pagination
         a.pagination__control-link.pagination__control-link--prev(
           class = (pagination.current > 1) ?
             "pagination__control-link--active" : "pagination__control-link--disable"
-          href="#"
+          href = (pagination.current > 1) ? "#" : false
           )
             | Назад
 
