@@ -6,7 +6,10 @@ include ./block-init.pug
     - var inc = 0
     each objSlide in slider.promoSlides
       - inc++
-      li.slider__item(class="slider__item--" + inc)
+      li.slider__item(
+        class= (inc == 1) ? "slider__item--active" : "",
+        data-slider-id = inc
+        )
         h3.slider__item-title
           | #{objSlide.title}
   a.slider__button.button(href="#")
@@ -16,5 +19,8 @@ include ./block-init.pug
     each objSlide in slider.promoSlides
       - inc++
       li.slider__control-item
-        button.slider__control-btn(class="slider__control-btn--" + inc)
+        button.slider__control-btn(
+          class= (inc == 1) ? "slider__control-btn--active" : ""
+          data-slider-id = inc
+          )
           | Слайд №#{inc}
