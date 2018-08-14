@@ -1,6 +1,18 @@
 .index {
   &__container {
     background: url('../img/ice-background--1.png') center top no-repeat;
+
+    &--bg-1 {
+      background: url('../img/ice-background--1.png') center top no-repeat;
+    }
+
+    &--bg-2 {
+      background: url('../img/ice-background--2.png') center top no-repeat;
+    }
+
+    &--bg-3 {
+      background: url('../img/ice-background--3.png') center top no-repeat;
+    }
   }
 
   &__page-header {
