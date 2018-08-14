@@ -1,7 +1,7 @@
 {
   "activePageName": "Главная",
 
-  "activePageUrl": "/index.html",
+  "activePageUrl": "index.html",
 
   "slider": {
     "promoSlides": [
@@ -23,37 +23,37 @@
       "title": "Малинка даром!",
       "description": "При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.",
       "buttonText": "Хочу варенье!",
-      "backgroundImgURL": "/assets/img/promo--1.jpg"
+      "backgroundImgURL": "assets/img/promo--1.jpg"
     },
     {
       "title": "Шоколадки даром!",
       "description": "При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.",
       "buttonText": "Хочу шоколадки!",
-      "backgroundImgURL": "/assets/img/promo--2.jpg"
+      "backgroundImgURL": "assets/img/promo--2.jpg"
     }
   ],
 
   "products": [
     {
-      "imgURL": "/assets/img/ice-cream--1.jpg",
+      "imgURL": "assets/img/ice-cream--1.jpg",
       "cost": "310",
       "title": "Сливочное с апельсиновым джемом и цитрусовой стружкой",
       "hit": true
     },
     {
-      "imgURL": "/assets/img/ice-cream--2.jpg",
+      "imgURL": "assets/img/ice-cream--2.jpg",
       "cost": "380",
       "title": "Сливочно-кофейное с кусочками шоколада",
       "hit": true
     },
     {
-      "imgURL": "/assets/img/ice-cream--3.jpg",
+      "imgURL": "assets/img/ice-cream--3.jpg",
       "cost": "355",
       "title": "Сливочно-клубничное с присыпкой из белого шоколада",
       "hit": true
     },
     {
-      "imgURL": "/assets/img/ice-cream--4.jpg",
+      "imgURL": "assets/img/ice-cream--4.jpg",
       "cost": "415",
       "title": "Сливочное крем-брюле с карамельной подливкой",
       "hit": true

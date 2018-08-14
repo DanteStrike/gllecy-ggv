@@ -11,14 +11,14 @@
     "products": [
       {
         "title": "Пломбир с апельсиновым джемом",
-        "imgURL": "/assets/img/ice-cream--1.jpg",
+        "imgURL": "assets/img/ice-cream--1.jpg",
         "cost": "200",
         "weight": "1,5",
         "fullPrice": "450"
       },
       {
         "title": "Клубничный пломбир с присыпкой из белого шоколада",
-        "imgURL": "/assets/img/ice-cream--3.jpg",
+        "imgURL": "assets/img/ice-cream--3.jpg",
         "cost": "200",
         "weight": "1,5",
         "fullPrice": "300"
@@ -29,7 +29,7 @@
   "headerNavMenuLinks": [
     {
       "name": "Каталог",
-      "url": "/catalog.html",
+      "url": "catalog.html",
       "subMenuLinks": [
         {
           "name": "Новинки",
@@ -37,7 +37,7 @@
         },
         {
           "name": "Сливочное",
-          "url": "/catalog.html"
+          "url": "catalog.html"
         },
         {
           "name": "Щербеты",

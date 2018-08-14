@@ -1,13 +1,13 @@
 {
   "pageTitle": "Сливочное мороженое",
-  "activePageUrl": "/catalog.html",
+  "activePageUrl": "catalog.html",
   "selectSort": ["по популярности", "по названию", "по цене"],
   "fatSort":  ["0%", "до 10%", "до 30%", "выше 30%"],
   "typeSort":  ["шоколадные", "сахарные присыпки", "фрукты", "сиропы", "джемы"],
   "breadcrumbs": [
     {
       "name": "Главная",
-      "url": "/index.html"
+      "url": "index.html"
     },
     {
       "name": "Каталог",
@@ -21,64 +21,64 @@
 
   "products": [
     {
-      "imgURL": "/assets/img/ice-cream--1.jpg",
+      "imgURL": "assets/img/ice-cream--1.jpg",
       "cost": "310",
       "title": "Сливочное с апельсиновым джемом и цитрусовой стружкой"
     },
     {
-      "imgURL": "/assets/img/ice-cream--2.jpg",
+      "imgURL": "assets/img/ice-cream--2.jpg",
       "cost": "380",
       "title": "Сливочно-кофейное с кусочками шоколада"
     },
     {
-      "imgURL": "/assets/img/ice-cream--3.jpg",
+      "imgURL": "assets/img/ice-cream--3.jpg",
       "cost": "355",
       "title": "Сливочно-клубничное с присыпкой из белого шоколада"
     },
     {
-      "imgURL": "/assets/img/ice-cream--4.jpg",
+      "imgURL": "assets/img/ice-cream--4.jpg",
       "cost": "415",
       "title": "Сливочное крем-брюле с карамельной подливкой"
     },
 
     {
-      "imgURL": "/assets/img/ice-cream--5.jpg",
+      "imgURL": "assets/img/ice-cream--5.jpg",
       "cost": "325",
       "title": "Сливочное с брусничным джемом"
     },
     {
-      "imgURL": "/assets/img/ice-cream--6.jpg",
+      "imgURL": "assets/img/ice-cream--6.jpg",
       "cost": "410",
       "title": "Сливочно-черничное с цельными ягодами черники"
     },
     {
-      "imgURL": "/assets/img/ice-cream--7.jpg",
+      "imgURL": "assets/img/ice-cream--7.jpg",
       "cost": "375",
       "title": "Сливочно-лимонное с карамельной присыпкой"
     },
     {
-      "imgURL": "/assets/img/ice-cream--8.jpg",
+      "imgURL": "assets/img/ice-cream--8.jpg",
       "cost": "320",
       "title": "Сливочное с шоколадной стружкой"
     },
 
     {
-      "imgURL": "/assets/img/ice-cream--9.jpg",
+      "imgURL": "assets/img/ice-cream--9.jpg",
       "cost": "440",
       "title": "Сливочно-ванильное с кусочками шоколада"
     },
     {
-      "imgURL": "/assets/img/ice-cream--10.jpg",
+      "imgURL": "assets/img/ice-cream--10.jpg",
       "cost": "435",
       "title": "Сливочноe с ментоловым сиропом"
     },
     {
-      "imgURL": "/assets/img/ice-cream--11.jpg",
+      "imgURL": "assets/img/ice-cream--11.jpg",
       "cost": "355",
       "title": "Сливочное с кусочками черного шоколада"
     },
     {
-      "imgURL": "/assets/img/ice-cream--12.jpg",
+      "imgURL": "assets/img/ice-cream--12.jpg",
       "cost": "420",
       "title": "Сливочное с мятным сиропом"
     }
