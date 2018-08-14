@@ -25,12 +25,13 @@ html(lang="ru")
         section.shares.page-main__shares
           h2.shares__section-title.visually-hidden
             | Акции
-          - var inc = 0
-          each share in shares
-            - inc++
-            - var mix = "shares"
-            - var mod = inc + ""
-            include ./blocks/share.pug
+          .shares__wrap
+            - var inc = 0
+            each share in shares
+              - inc++
+              - var mix = "shares"
+              - var mod = inc + ""
+              include ./blocks/share.pug
 
         section.hits.page-main__hits
           h2.hits__title.visually-hidden

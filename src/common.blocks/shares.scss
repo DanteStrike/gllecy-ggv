@@ -1,6 +1,8 @@
 .shares {
-  display: flex;
-  justify-content: space-between;
-  min-height: 230px;
-  padding: 0 2.25%;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    min-height: 230px;
+    padding: 0 2.25%;
+  }
 }
