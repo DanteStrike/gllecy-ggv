@@ -35,4 +35,6 @@ let onSliderControlClick = function (evt) {
   container.classList.add(`${CONTAINER_BACKGROUND_PREFIX}-${targetId}`);
 }
 
-sliderControl.addEventListener(`click`, onSliderControlClick);
+if (sliderControl) {
+  sliderControl.addEventListener(`click`, onSliderControlClick);
+}
