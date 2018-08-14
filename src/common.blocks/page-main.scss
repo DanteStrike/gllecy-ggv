@@ -54,4 +54,22 @@
   &__pagination {
     margin-bottom: 30px;
   }
+
+  &--bottom-border {
+    position: relative;
+    // IE11 FIX
+
+    display: block;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 2.25%;
+
+      width: 95.5%;
+      height: 1px;
+
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
 }
