@@ -44,7 +44,7 @@ let pxStep = (MAX_VALUE - MIN_VALUE) / rangeBar.clientWidth;
 let onRangeToggleMouseDown = function (evt) {
   evt.preventDefault();
 
-  let target = event.target;
+  let target = evt.target;
   let targetCoordX = getOffsetRect(target).left;
   let mouseStartCoordX = evt.clientX;
   let mouseTargetPositionX = mouseStartCoordX - targetCoordX;
