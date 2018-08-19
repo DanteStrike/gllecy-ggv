@@ -2,8 +2,10 @@
 include ./block-init.pug
 
 fieldset.filter-price(class=[mix, mod])
+  legend.filter-price__title.visually-hidden
+      | Цена:
   .filter-price__wrap
-    legend.filter-price__title
+    span.filter-price__title
       | Цена:
     label.visually-hidden(for="filter-price__min")
       | Минимальная цена

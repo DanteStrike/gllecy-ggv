@@ -6,7 +6,7 @@ form.form-cart(class=[mix, mod], method="GET", action="https://echo.htmlacademy.
     each product in user.products
       li.form-cart__product-item
         button.form-cart__product-erase
-        img.form-cart__product-img(src=product.imgURL, alt=product.name)
+        img.form-cart__product-img(src=product.imgURL, alt=product.title)
         span.form-cart__product-title #{product.title}
         span.form-cart__product-weight #{product.weight} кг
         span.form-cart__product-multiply x
