@@ -17,6 +17,11 @@ $toggleBgInner: rgba(171, 171, 171, 1);
       /* display: none; <- Crashes Chrome on hover */
 
       -webkit-appearance: none;
+           -o-appearance: none;
+    }
+
+    input {
+      -moz-appearance: textfield;
     }
   }
 
