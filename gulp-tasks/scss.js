@@ -9,6 +9,8 @@ const path = MAIN_CONFIG.path;
 const reload = MAIN_CONFIG.browserSync.reload;
 const NODE_ENV = MAIN_CONFIG.NODE_ENV;
 
+const LEC = require('gulp-line-ending-corrector');
+
 const sass = require('gulp-sass');
 const cssMin = require('gulp-clean-css');
 const postcss = require('gulp-postcss');
@@ -21,6 +23,7 @@ const sourcemaps = require('gulp-sourcemaps');
 gulp.task('csscomb', function () {
   return gulp.src(path.src.scssAll) // Найдем все файлы css
     .pipe(csscomb()) // "Причешим"
+    .pipe(LEC({eolc: 'CRLF'}))
     .pipe(gulp.dest(path.src.commonBlocks));
 });
 
@@ -29,6 +32,7 @@ gulp.task('css:buildStyle', ['csscomb'], function () {
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
     .pipe(csscomb())
+    .pipe(LEC({eolc: 'CRLF'}))
     .pipe(gulp.dest(path.src.cssMain)) // Предпросмотр
     .pipe(reload({stream: true}));
 });
