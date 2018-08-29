@@ -44,7 +44,7 @@
   }
 
   &__filters {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
   &__catalog {
@@ -70,6 +70,23 @@
       height: 1px;
 
       background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@media (max-width: 785px) {
+  .page-main {
+    &__row {
+      flex-wrap: wrap;
+    }
+
+    &__blog {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__dispatch {
+      width: 100%;
     }
   }
 }

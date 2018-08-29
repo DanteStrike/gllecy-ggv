@@ -36,3 +36,58 @@
     background-color: #9d8b84;
   }
 }
+
+
+@media (max-width: 860px) {
+  .index {
+    &__container {
+      background-position-y: 200px;
+      background-size: contain;
+
+      &--bg-1 {
+        background-image: url('../img/ice-background--1--tablet.png');
+      }
+
+      &--bg-2 {
+        background-image: url('../img/ice-background--2--tablet.png');
+      }
+
+      &--bg-3 {
+        background-image: url('../img/ice-background--3--tablet.png');
+      }
+    }
+
+    &__page-header {
+      margin-bottom: 200px;
+    }
+  }
+}
+
+
+@media (max-width: 785px) {
+  .index {
+    &__container {
+      background-position-y: 250px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .index {
+    &__container {
+      background-position-y: 250px;
+    }
+
+    &__page-header {
+      margin-bottom: 200px;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .index {
+    &__container {
+      background-position-y: 280px;
+    }
+  }
+}

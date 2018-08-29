@@ -52,3 +52,21 @@ $inputBrColor: rgb(211, 211, 211);
     border-radius: 22px;
   }
 }
+
+@media (max-width: 430px) {
+  .dispatch {
+    &__form {
+      flex-wrap: wrap;
+    }
+
+    &__form-input {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+
+    &__form-button {
+      margin: 0 auto;
+    }
+  }
+}

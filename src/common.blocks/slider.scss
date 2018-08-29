@@ -27,7 +27,7 @@ $hoverCtrlBtnBg: rgba(255, 255, 255, 0.4);
 
   &__item-title {
     display: block;
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
 
     font-weight: 700;
@@ -88,6 +88,39 @@ $hoverCtrlBtnBg: rgba(255, 255, 255, 0.4);
       &:hover {
         background-color: $activeCtrlBtnBg;
       }
+    }
+  }
+}
+
+@media (max-width: 785px) {
+  .slider {
+    &__item-title {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    &__control-list {
+      bottom: 85px;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .slider {
+    &__list {
+      position: relative;
+
+      min-height: 250px;
+    }
+
+    &__item-title {
+      font-size: 1.75rem;
     }
   }
 }

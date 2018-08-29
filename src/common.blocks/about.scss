@@ -60,3 +60,40 @@ $sectionMainColor: rgb(50, 50, 50);
     }
   }
 }
+
+@media (max-width: 785px) {
+  .about {
+    &__title {
+      text-align: center;
+    }
+    &__featur {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    padding: 10px;
+    &__title {
+      margin-bottom: 70px;
+
+      font-size: 1.2rem;
+    }
+
+    &__featur {
+      padding-left: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 65px;
+      }
+
+      &::before {
+        top: -50px;
+        left: 50%;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

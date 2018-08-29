@@ -21,7 +21,7 @@ $dftBgColor: rgb(255, 255, 255);
   }
 
   &__wrap {
-    width: 280px;
+    max-width: 280px;
   }
 
   &__link {
@@ -34,5 +34,17 @@ $dftBgColor: rgb(255, 255, 255);
     &:active {
       color: $hoverLink;
     }
+  }
+}
+
+@media (max-width: 860px) {
+  .blog {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 580px) {
+  .blog {
+    background-size: auto;
   }
 }

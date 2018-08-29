@@ -9,7 +9,8 @@ $wrapBg: rgb(169, 185, 175);
   }
   &__wrap {
     display: flex;
-    height: 36px;
+    flex-wrap: wrap;
+    min-height: 36px;
     padding-top: 10px;
     padding-left: 14px;
 
@@ -36,6 +37,7 @@ $wrapBg: rgb(169, 185, 175);
 
     display: block;
     margin-right: 17px;
+    margin-bottom: 5px;
     padding-left: 32px;
 
     cursor: pointer;
@@ -51,6 +53,20 @@ $wrapBg: rgb(169, 185, 175);
 
       background: url('../img/radio-off.svg') no-repeat;
       background-size: 100% auto;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .filter-fat {
+    &__wrap {
+      max-width: 270px;
+    }
+
+    &__label {
+      &:first-of-type {
+        margin-right: 49px;
+      }
     }
   }
 }

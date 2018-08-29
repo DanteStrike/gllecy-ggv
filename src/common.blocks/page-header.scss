@@ -160,6 +160,7 @@ $hoverSvgFill: rgb(0, 0, 0);
   }
 
   &__nav-user {
+    width: 261px;
     margin: 0 0 0 auto;
   }
 
@@ -329,5 +330,21 @@ $hoverSvgFill: rgb(0, 0, 0);
 
     font-size: 1.375rem;
     line-height: 1.090909;
+  }
+}
+
+@media (max-width: 860px) {
+  .page-header {
+    &__first-layer {
+      flex-direction: column;
+    }
+
+    &__logo {
+      margin: 0 auto;
+    }
+
+    &__nav-menu-list {
+      flex-direction: column;
+    }
   }
 }

@@ -6,3 +6,11 @@
     padding: 0 2.25%;
   }
 }
+
+@media (max-width: 785px) {
+  .shares {
+    &__wrap {
+      flex-wrap: wrap;
+    }
+  }
+}

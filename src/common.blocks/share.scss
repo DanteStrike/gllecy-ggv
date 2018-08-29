@@ -35,3 +35,14 @@
     border-radius: 23px;
   }
 }
+
+@media (max-width: 785px) {
+  .share {
+    width: 100%;
+
+    background-size: cover;
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+}

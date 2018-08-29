@@ -69,6 +69,7 @@ $hoverActiveLink: rgb(255, 188, 158);
     width: 305px;
     height: 40px;
     margin-top: 16px;
+    margin-bottom: 20px;
   }
 
   &__info-item {
@@ -130,6 +131,7 @@ $hoverActiveLink: rgb(255, 188, 158);
   }
 
   &__copyright {
+    margin-bottom: 20px;
     padding-top: 1px;
 
     text-align: left;
@@ -180,6 +182,23 @@ $hoverActiveLink: rgb(255, 188, 158);
       &::after {
         background-color: $hoverActiveLink;
       }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .page-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-footer {
+    &__info-list {
+      flex-wrap: nowrap;
+      width: auto;
+      height: auto;
     }
   }
 }

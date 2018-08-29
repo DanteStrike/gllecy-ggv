@@ -130,3 +130,22 @@ $hoverActiveLink: rgb(255, 188, 158);
     transform: translateX(-50%);
   }
 }
+
+
+@media (max-width: 860px) {
+  .products {
+    &__product {
+      width: 46.6%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    &__product {
+      width: 93.2%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
